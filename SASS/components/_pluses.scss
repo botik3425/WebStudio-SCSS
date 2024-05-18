@@ -1,0 +1,52 @@
+/*index Pluses */
+.pluses-container {
+    justify-content: space-between;
+  }
+  .pluses {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    overflow: hidden;
+  }
+  
+  .head-item:first-child .head-page:after{
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  
+  .pluses-greytext {
+    color: var(--for-grey-parts);
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  
+  .pluses-blackslog {
+    color: var(--for-true-black-parts);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  .pluses-list {
+    display: flex;
+    column-gap: 30px;
+  }
+  
+  .pluses-icon {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    background-color: var(--for-white-parts);
+  }
+  
+  .pluses-item:first-child, .pluses-item:nth-child(2){
+    animation-name: enter-from-left;
+    animation-duration: 1s;
+  }
+  
+  .pluses-item:last-child, .pluses-item:nth-child(3){
+    animation-name: enter-from-right;
+    animation-duration: 1s;
+  }
+  

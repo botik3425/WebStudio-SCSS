@@ -1,0 +1,101 @@
+/*index Our team */
+.ourteam-container {
+    justify-content: center;
+    padding-top: 94px;
+  }
+  .ourteam {
+    padding-bottom: 94px;
+    background-color: var(--for-white-parts);
+    overflow: hidden;
+  }
+  .ourteam-slog {
+    color: var(--for-true-black-parts);
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+      animation-name: enter-from-up;
+      animation-duration: 1s;
+  }
+  
+  .ourteam-icons {
+    padding: 0px 32px;
+    display: flex;
+    column-gap: 10px;
+  }
+  
+  .ourteam-icon {
+    width: 20px;
+    height: 20px;
+    fill: #afb1b8;
+    cursor: pointer;
+    /* padding: 12px; */
+  }
+  
+  .ourteam-icon-link {
+    border-radius: 23px;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+  }
+  
+  .ourteam-icon-link:hover,
+  .ourteam-icon-link:focus {
+    background-color: #2196f3;
+  }
+  
+  .ourteam-icon-link:hover .ourteam-icon,
+  .ourteam-icon-link:focus .ourteam-icon {
+    fill: white;
+  }
+  
+  .ourteam-name {
+    color: var(--for-true-black-parts);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .ourteam-text {
+    color: var(--for-grey-parts);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .ourteam-list {
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+  }
+  .ourteam-item {
+    background-color: var(--for-true-white-parts);
+    border-radius: 4px;
+    padding-bottom: 30px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  .ourteam-item:first-child, .ourteam-item:nth-child(2){
+    animation-name: enter-from-left;
+    animation-duration: 1s;
+  }
+  
+  .ourteam-item:last-child, .ourteam-item:nth-child(3){
+    animation-name: enter-from-right;
+    animation-duration: 1s;
+  }
+  
+  .ourteam-photo {
+    width: 270px;
+    height: 260px;
+  }
+  

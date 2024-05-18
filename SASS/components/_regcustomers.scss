@@ -1,0 +1,66 @@
+/* Regular customers(regcustomers) */
+
+.regcustomers {
+    padding: 94px 0px;
+    overflow: hidden;
+  }
+  
+  .regcustomers-title {
+    color: #212121;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.08px;
+      animation-name: enter-from-up;
+      animation-duration: 1s;
+  }
+  
+  .regcustomers-icons {
+    display: flex;
+    column-gap: 30px;
+  }
+  
+  .regcustomers-icon-link {
+    width: 170px;
+    height: 92px;
+    border: #afb1b8 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border;
+    transition-duration: 250ms;
+  }
+  
+  .regcustomers-icon-link:first-child, .regcustomers-icon-link:nth-child(2), .regcustomers-icon-link:nth-child(3){
+      animation-name: enter-from-left;
+      animation-duration: 1s;
+  }
+  
+  .regcustomers-icon-link:last-child, .regcustomers-icon-link:nth-child(5), .regcustomers-icon-link:nth-child(4){
+    animation-name: enter-from-right;
+    animation-duration: 1s;
+  }
+  
+  .regcustomers-icon {
+    width: 170px;
+    height: 92px;
+    fill: #afb1b8;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+    transition-duration: 250ms;
+  }
+  
+  .regcustomers-icon-link:hover .regcustomers-icon,
+  .regcustomers-icon-link:focus .regcustomers-icon {
+    fill: #2196f3;
+  }
+  
+  .regcustomers-icon-link:hover,
+  .regcustomers-icon-link:focus {
+    border: #2196f3 1px solid;
+  }
+  

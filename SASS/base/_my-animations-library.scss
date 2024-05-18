@@ -1,0 +1,105 @@
+@keyframes enter-from-up{
+    0%{
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+  
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-left{
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-right{
+    0%{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-down{
+    0%{
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+  
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-upleft{
+    0%{
+      transform: translate(-1000px, -1000px);
+      opacity: 0;
+    }
+  
+    100%{
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-downleft{
+    0%{
+        transform: translate(-1000px, 1000px);
+      opacity: 0;
+    }
+  
+    100%{
+        transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-downright{
+    0%{
+        transform: translate(1000px, 1000px);
+      opacity: 0;
+    }
+  
+    100%{
+        transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-upright{
+    0%{
+        transform: translate(1000px, -1000px);
+      opacity: 0;
+    }
+  
+    100%{
+        transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes enter-from-center{
+    0%{
+      opacity: 0;
+    }
+  
+    100%{
+      opacity: 1;
+    }
+  }

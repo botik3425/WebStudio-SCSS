@@ -1,0 +1,57 @@
+.head-item:nth-child(2) .head-page:after{
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  
+  .heroport {
+    padding-top: 94px;
+    padding-bottom: 50px;
+    padding-top: 80.5px;
+    overflow: hidden;
+  }
+  
+  .heroport-blacktag:hover,
+  .heroport-blacktag:focus {
+    background-color: var(--for-blue-parts);
+    color: var(--for-true-white-parts);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heroport-blacktag {
+    background-color: var(--for-white-parts);
+    border-radius: 4px;
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: center;
+    padding: 6px 22px;
+    outline: none;
+    border: none;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+  }
+  .heroport-items {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+  }
+  
+  .heroport-item:first-child, .heroport-item:nth-child(2){
+    animation-name: enter-from-left;
+    animation-duration: 1s;
+  }
+  
+  .heroport-item:nth-child(3){
+    animation-name: enter-from-up;
+    animation-duration: 1s;
+  }
+  
+  .heroport-item:nth-child(4), .heroport-item:last-child{
+    animation-name: enter-from-right;
+    animation-duration: 1s;
+  }

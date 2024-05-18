@@ -1,0 +1,68 @@
+.lop-container,
+.head-container,
+.wwd-container,
+.ourteam-container,
+.hero-container,
+.heroport-container,
+.pluses-container,
+.basement-container,
+.regcustomers-container {
+  /* outline: solid red 2px; */
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.all {
+  font-family: Roboto;
+  font-size: 14px;
+  position: relative;
+}
+
+:root {
+  --for-blue-parts: #2196f3;
+  --for-white-parts: #f5f4fa;
+  --for-true-white-parts: #ffffff;
+  --for-black-parts: #2f303a;
+  --for-light-grey-parts: #ffffff99;
+  --for-grey-parts: #757575;
+  --for-true-black-parts: #212121;
+  --for-strange-white-parts: #eeeeee;
+}
+
+.center {
+  padding-top: 80.5px;
+}
+
+.scroll-button{
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    transition-property: width, height;
+    transition-duration: 250ms;
+    background-color: #757575;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scroll-button:hover{
+    width: 110px;
+    height: 110px;
+  }
+  
+  .scroll-button:hover .scroll-button-icon{
+    width: 80px;
+    height: 80px;
+  }
+  
+  .scroll-button-icon{
+    width: 70px;
+    height: 70px;
+    transition-property: width, height;
+    transition-duration: 250ms;
+  }
