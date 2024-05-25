@@ -9,7 +9,7 @@
     align-items: center;
   }
   .heroindex-whiteslog {
-    color: var(--for-true-white-parts);
+    color: $for-true-white-parts;
     font-size: 44px;
     font-weight: 900;
     text-transform: uppercase;
@@ -22,8 +22,8 @@
   }
   
   .heroindex-button {
-    background-color: var(--for-blue-parts);
-    color: var(--for-true-white-parts);
+    background-color: $for-blue-parts;
+    color: $for-true-white-parts;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.88;

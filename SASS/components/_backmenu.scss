@@ -1,9 +1,28 @@
-.backmenu-opened{
+.backmenu__closed{
+  position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-color: $for-grey-parts;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: enter-from-left;
+    animation-duration: 1s;
+
+    &__title{
+      writing-mode: vertical-lr;
+      color: $for-true-white-parts;
+    }
+}
+
+
+.backmenu__opened{
     opacity: 0; 
     position: fixed;
     top: 0;
     bottom: 0;
-    background-color: #757575;
+    background-color: $for-grey-parts;
     width: 50px;
     display: flex;
     align-items: center;
@@ -11,56 +30,39 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
     transition-property: width;
-  }
-  
-  .backmenu-closed{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 50px;
-    background-color: #757575;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation-name: enter-from-left;
-    animation-duration: 1s;
-  }
-  
-  .backmenu-closed-title{
-    writing-mode: vertical-lr;
-    color: #fff;
-  }
-  
-  .backmenu-icon{
-    fill: #f1b31c;
+
+      
+  &__icon{
+    fill: $for-orange-parts;
     width: 20px;
     height: 20px;
   }
   
-  .backmenu-opened:hover{
+  &:hover{
     opacity: inherit;
     width: 300px;
   }
   
-  .backmenu-text{
-    color: #ffffff;
+  &__text{
+    color: $for-true-white-parts;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
     transition-property: color;
+
+    &:hover{
+      color: $for-orange-parts;
+    }
   }
   
-  .backmenu-text:hover{
-    color: #f1b31c;
-  }
-  
-  .backmenu-item{
+  &__item{
     display: flex;
     align-items: center;
     gap: 10px;
   }
   
-  .backmenu-list{
+  &__list{
     gap: 10px;
     display: flex;
     flex-direction: column;
+  }
   }

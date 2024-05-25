@@ -3,39 +3,39 @@
 .basement {
     padding-bottom: 60px;
     padding-top: 60px;
-    background-color: var(--for-black-parts);
-      animation-name: enter-from-down;
-      animation-duration: 1s;
-  }
-  
-  .basement-logo {
+    background-color: $for-black-parts;
+    animation-name: enter-from-down;
+    animation-duration: 1s;
+
+        
+  &__logo {
     margin-bottom: 20px;
     display: block;
-    background: linear-gradient(90deg, #2196f3, #fff);
+    background: linear-gradient(90deg, $for-blue-parts, $for-true-white-parts);
   -webkit-background-clip: text;
   background-size: 144px 31.2px;
   -webkit-text-fill-color:
   transparent;
   }
   
-  .basement-logobluepart {
-    color: var(--for-blue-parts);
+  &__logobluepart {
+    color: $for-blue-parts;
     font-size: 26px;
     font-family: Raleway;
     font-weight: 700;
     letter-spacing: 0.03em;
     word-wrap: break-word;
   }
-  .basement-logowhitepart {
-    color: var(--for-true-white-parts);
+  &__logowhitepart {
+    color: $for-true-white-parts;
     font-size: 26px;
     font-family: Raleway;
     font-weight: 700;
     letter-spacing: 0.03em;
   }
   
-  .basement-adress {
-    color: var(--for-true-white-parts);
+  &__adress {
+    color: $for-true-white-parts;
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -43,16 +43,16 @@
     width: 231px;
   }
   
-  .basement-container {
+  &__container {
     flex-direction: row;
     justify-content: start;
     align-content: normal;
     row-gap: 20px;
     display: flex;
   }
-  .basement-tele,
-  .basement-mail {
-    color: var(--for-light-grey-parts);
+  &__tele,
+  &__mail {
+    color: $for-light-grey-parts;
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -60,30 +60,37 @@
     transition-property: color;
     transition-duration: 250ms;
   }
-  
-  .basement-tele:hover,
-  .basement-mail:hover {
-    color: #2196f3;
+
+  &__tele{
+    &:hover {
+      color: $for-blue-parts;
+    }
+  }
+
+  &__mail{
+    &:hover{
+      color: $for-blue-parts;
+    }
   }
   
-  .basement-list {
+  &__list {
     margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     row-gap: 9px;
   }
   
-  .basement-icons {
+  &__icons {
     margin-left: 70px;
   }
   
-  .basement-icon-list {
+  &__icon-list {
     display: flex;
     column-gap: 10px;
   }
   
-  .basement-icon-title {
-    color: #fff;
+  &__icon-title {
+    color: $for-true-white-parts;
     margin-bottom: 20px;
     font-family: Roboto;
     font-size: 14px;
@@ -94,13 +101,13 @@
     text-transform: uppercase;
   }
   
-  .basement-icon {
+  &__icon {
     width: 20px;
     height: 20px;
-    fill: white;
+    fill: $for-true-white-parts;
   }
   
-  .basement-icon-link {
+  &__icon-link {
     width: 44px;
     height: 44px;
     padding: 12px;
@@ -111,24 +118,24 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: background-color;
     transition-duration: 250ms;
+
+    &:hover,
+    &:focus {
+      background-color: $for-blue-parts;
+    }
   }
   
-  .basement-icon-link:hover,
-  .basement-icon-link:focus {
-    background-color: #2196f3;
-  }
-  
-  .basement-form {
+  &__form {
     margin-left: 93px;
     width: 570px;
   }
   
-  .basement-form-container {
+  &__form-container {
     display: flex;
   }
   
-  .basement-form-title {
-    color: #fff;
+  &__form-title {
+    color: $for-true-white-parts;
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -139,7 +146,7 @@
     margin-bottom: 20px;
   }
   
-  .basement-form-input {
+  &__form-input {
     width: 358px;
     height: 50px;
     flex-shrink: 0;
@@ -149,10 +156,10 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     margin-right: 12px;
     padding-left: 16px;
-    color: #fff;
-  }
-  
-  .basement-form-input::placeholder {
+    color: $for-true-white-parts;
+
+      
+  &::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-family: Roboto;
     font-size: 16px;
@@ -161,15 +168,16 @@
     line-height: 20px; /* 125% */
     letter-spacing: 0.48px;
   }
-  
-  .basement-form-button {
+  }
+
+  &__form-button {
     width: 200px;
     height: 50px;
     flex-shrink: 0;
     border-radius: 4px;
-    background: #2196f3;
+    background: $for-blue-parts;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    color: #fff;
+    color: $for-true-white-parts;
     text-align: left;
     font-family: Roboto;
     font-size: 16px;
@@ -184,17 +192,19 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: box-shadow;
     transition-duration: 250ms;
-  }
-  
-  .basement-form-button:hover{
+      
+  &:hover{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
   }
+
+  }
   
-  .basement-form-icon {
+  &__form-icon {
     width: 24px;
     height: 24px;
     margin-left: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
-    fill: #fff;
+    fill: $for-true-white-parts;
+  }
   }

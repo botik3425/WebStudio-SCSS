@@ -8,7 +8,7 @@
     overflow: hidden;
   }
   .wwd-slog {
-    color: var(--for-true-black-parts);
+    color: $for-true-black-parts;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -55,6 +55,6 @@
     line-height: 16.41px;
     letter-spacing: 0.03em;
     text-align: center;
-    color: white;
+    color: $for-true-white-parts;
   }
   

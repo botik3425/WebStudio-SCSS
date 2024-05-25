@@ -6,7 +6,7 @@
   }
   
   .regcustomers-title {
-    color: #212121;
+    color: $for-black-parts;
     margin-bottom: 50px;
     text-align: center;
     font-family: Roboto;
@@ -27,7 +27,7 @@
   .regcustomers-icon-link {
     width: 170px;
     height: 92px;
-    border: #afb1b8 1px solid;
+    border: $for-strange-grey-parts 1px solid;
     border-radius: 4px;
     cursor: pointer;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,7 +48,7 @@
   .regcustomers-icon {
     width: 170px;
     height: 92px;
-    fill: #afb1b8;
+    fill: $for-strange-grey-parts;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: fill;
     transition-duration: 250ms;
@@ -56,11 +56,11 @@
   
   .regcustomers-icon-link:hover .regcustomers-icon,
   .regcustomers-icon-link:focus .regcustomers-icon {
-    fill: #2196f3;
+    fill: $for-blue-parts;
   }
   
   .regcustomers-icon-link:hover,
   .regcustomers-icon-link:focus {
-    border: #2196f3 1px solid;
+    border: $for-blue-parts 1px solid;
   }
   

@@ -5,11 +5,11 @@
   }
   .ourteam {
     padding-bottom: 94px;
-    background-color: var(--for-white-parts);
+    background-color: $for-white-parts;
     overflow: hidden;
   }
   .ourteam-slog {
-    color: var(--for-true-black-parts);
+    color: $for-true-black-parts;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -28,7 +28,7 @@
   .ourteam-icon {
     width: 20px;
     height: 20px;
-    fill: #afb1b8;
+    fill: $for-strange-grey-parts;
     cursor: pointer;
     /* padding: 12px; */
   }
@@ -45,16 +45,16 @@
   
   .ourteam-icon-link:hover,
   .ourteam-icon-link:focus {
-    background-color: #2196f3;
+    background-color: $for-blue-parts;
   }
   
   .ourteam-icon-link:hover .ourteam-icon,
   .ourteam-icon-link:focus .ourteam-icon {
-    fill: white;
+    fill: $for-true-white-parts;
   }
   
   .ourteam-name {
-    color: var(--for-true-black-parts);
+    color: $for-true-black-parts;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.03em;
@@ -64,7 +64,7 @@
   }
   
   .ourteam-text {
-    color: var(--for-grey-parts);
+    color: $for-grey-parts;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.03em;
@@ -77,7 +77,7 @@
     flex-wrap: wrap;
   }
   .ourteam-item {
-    background-color: var(--for-true-white-parts);
+    background-color: $for-true-white-parts;
     border-radius: 4px;
     padding-bottom: 30px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),

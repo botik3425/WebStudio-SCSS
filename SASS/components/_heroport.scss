@@ -12,8 +12,8 @@
   
   .heroport-blacktag:hover,
   .heroport-blacktag:focus {
-    background-color: var(--for-blue-parts);
-    color: var(--for-true-white-parts);
+    background-color: $for-blue-parts;
+    color: $for-true-white-parts;
     border-radius: 4px;
     font-size: 16px;
     line-height: 1.5;
@@ -23,7 +23,7 @@
   }
   
   .heroport-blacktag {
-    background-color: var(--for-white-parts);
+    background-color: $for-white-parts;
     border-radius: 4px;
     line-height: 1.5;
     font-size: 16px;

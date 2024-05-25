@@ -1,3 +1,6 @@
+@import "./utilites/variables";
+@import "./utilites/my-animations-library";
+@import "./utilites/scroll";
 @import "./base/reset";
 @import "./base/common";
 @import "./components/header";
@@ -9,5 +12,3 @@
 @import "./components/regcustomers";
 @import "./components/modal";
 @import "./components/backmenu";
-@import "./utilites/my-animations-library";
-@import "./utilites/scroll";

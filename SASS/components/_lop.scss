@@ -9,7 +9,7 @@
     gap: 30px;
   }
   .lop-tag {
-    color: var(--for-grey-parts);
+    color: $for-grey-parts;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.88;
@@ -17,7 +17,7 @@
   }
   
   .lop-slog {
-    color: var(--for-true-black-parts);
+    color: $for-true-black-parts;
     font-size: 18px;
     font-weight: 700;
     line-height: 2;
@@ -27,8 +27,8 @@
     margin-bottom: 4px;
   }
   .lop-product {
-    background-color: var(--for-true-white-parts);
-    border: 1px solid var(--for-strange-white-parts);
+    background-color: $for-true-white-parts;
+    border: 1px solid $for-strange-white-parts;
     flex-basis: calc((100% - 2 * 30px) / 3);
     height: 404px;
     padding-bottom: 20px;
@@ -83,7 +83,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: opacity;
     transition-duration: 250ms;
-    color: #FFF;
+    color: $for-true-white-parts;
   
     font-family: Roboto;
     font-size: 18px;
