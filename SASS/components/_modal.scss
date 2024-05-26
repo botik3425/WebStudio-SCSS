@@ -1,33 +1,32 @@
 .backdrop {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-  }
-  
-  .modal {
-    width: 528px;
-    height: 581px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 4px;
-    background-color: $for-true-white-parts;
-    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
-      0px 1px 3px 0px #0000001f;
-    padding: 40px;
-  }
-  
-  .modal-title {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: $for-true-white-parts;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+  padding: 40px;
+
+  &__title {
     font-family: Roboto;
     font-size: 20px;
     font-weight: 700;
@@ -36,8 +35,8 @@
     text-align: center;
     margin-bottom: 12px;
   }
-  
-  .modal-close {
+
+  &__close {
     width: 30px;
     height: 30px;
     right: 8px;
@@ -50,34 +49,49 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .modal-close-icon:hover{
-    fill: $for-blue-parts;
-  }
-  
-  .modal-close-icon {
+
+  &__close__icon {
     width: 18px;
     height: 18px;
     fill: $for-true-black-parts;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: fill;
     transition-duration: 250ms;
+
+    &:hover {
+      fill: $for-blue-parts;
+    }
   }
-  
-  .modal-list {
+
+  &__list {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
   }
-  
-  .modal-item {
+  &__item {
     display: flex;
     flex-direction: column;
     row-gap: 4px;
     position: relative;
+
+    &:focus-within {
+      fill: $for-blue-parts;
+    }
+
+    &:hover .modal__icon,
+    &:hover .modal__input {
+      fill: $for-blue-parts;
+      border-color: $for-blue-parts;
+    }
+
+    &:last-child .modal__input {
+      width: 448px;
+      height: 120px;
+      padding: 12px 16px 94px 16px;
+    }
   }
-  
-  .modal-text {
+
+  &__text {
     color: $for-grey-parts;
     font-family: Roboto;
     font-size: 12px;
@@ -86,8 +100,8 @@
     line-height: normal;
     letter-spacing: 0.12px;
   }
-  
-  .modal-input {
+
+  &__input {
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     width: 448px;
@@ -96,29 +110,13 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: border-color;
     transition-duration: 250ms;
+
+    &:focus {
+      border-color: $for-blue-parts;
+    }
   }
-  
-  .modal-input:focus{
-    border-color: $for-blue-parts;
-  }
-  
-  .modal-item:last-child .modal-input {
-    width: 448px;
-    height: 120px;
-    padding: 12px 16px 94px 16px;
-  }
-  
-  .modal-item:last-child .modal-input::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-    font-family: Roboto;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.12px;
-  }
-  
-  .modal-icon {
+
+  &__icon {
     position: absolute;
     width: 18px;
     fill: $for-true-black-parts;
@@ -130,29 +128,20 @@
     transition-property: fill, border-color;
     transition-duration: 250ms;
   }
-  
-  .modal-item:focus-within{
-    fill: $for-blue-parts;
-  }
-  
-  .modal-item:hover .modal-icon, .modal-item:hover .modal-input{
-    fill: $for-blue-parts;
-    border-color: $for-blue-parts;
-  }
-  
-  .modal-conditions {
+
+  &__conditions {
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
   }
-  
-  .modal-conditions-text {
+
+  &__conditions__text {
     margin-left: 7px;
     margin-right: 4px;
     color: $for-grey-parts;
-  
+
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -160,8 +149,8 @@
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.42px;
   }
-  
-  .modal-conditions-link {
+
+  &__conditions__link {
     color: $for-blue-parts;
     font-family: Roboto;
     font-size: 14px;
@@ -171,13 +160,13 @@
     letter-spacing: 0.42px;
     text-decoration-line: underline;
   }
-  
-  .modal-conditions-checkbox {
+
+  &__conditions__checkbox {
     width: 16px;
     height: 15px;
   }
-  
-  .modal-button {
+
+  &__button {
     border-radius: 4px;
     background-color: $for-blue-parts;
     width: 200px;
@@ -194,16 +183,16 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: box-shadow, background-color;
     transition-duration: 250ms;
+
+    &:hover {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
+      background-color: $for-strange-blue-parts;
+    }
   }
-  
-  .modal-button:hover{
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
-    background-color: $for-strange-blue-parts;
-  }
-  
-  .modal-form {
+
+  &__form {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+}

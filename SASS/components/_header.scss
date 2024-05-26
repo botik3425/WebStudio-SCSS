@@ -47,7 +47,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color;
     transition-duration: 250ms;
-    transition-property: transform;
+    transition-property: color;
 
       
   &::after{
@@ -76,11 +76,11 @@
 } 
   &__item{
     position: relative;
-      
-  &:hover &::after{
-    opacity: inherit;
-    transform: scaleX(1);
-  }
+
+    &:hover .head__page:after{
+      opacity: 1;
+      transform: scaleX(1);
+    }
 }
   
   &__tel,
@@ -124,8 +124,8 @@
     align-items: center;
   }
   
-  &__list2 &__item:hover &__icon-mail,
-  &__list2 &__item:hover &__icon-tel,
+  &__list2 &__item:hover &__icon__mail,
+  &__list2 &__item:hover &__icon__tel,
   &__list2 &__item:hover &__tel,
   &__list2 &__item:hover &__email,
   &__email:focus &__icon-mail,

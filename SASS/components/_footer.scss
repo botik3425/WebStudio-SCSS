@@ -84,12 +84,12 @@
     margin-left: 70px;
   }
   
-  &__icon-list {
+  &__icon__list {
     display: flex;
     column-gap: 10px;
   }
   
-  &__icon-title {
+  &__icon__title {
     color: $for-true-white-parts;
     margin-bottom: 20px;
     font-family: Roboto;
@@ -107,7 +107,7 @@
     fill: $for-true-white-parts;
   }
   
-  &__icon-link {
+  &__icon__link {
     width: 44px;
     height: 44px;
     padding: 12px;
@@ -130,11 +130,11 @@
     width: 570px;
   }
   
-  &__form-container {
+  &__form__container {
     display: flex;
   }
   
-  &__form-title {
+  &__form__title {
     color: $for-true-white-parts;
     font-family: Roboto;
     font-size: 14px;
@@ -146,7 +146,7 @@
     margin-bottom: 20px;
   }
   
-  &__form-input {
+  &__form__input {
     width: 358px;
     height: 50px;
     flex-shrink: 0;
@@ -170,7 +170,7 @@
   }
   }
 
-  &__form-button {
+  &__form__button {
     width: 200px;
     height: 50px;
     flex-shrink: 0;
@@ -199,7 +199,7 @@
 
   }
   
-  &__form-icon {
+  &__form__icon {
     width: 24px;
     height: 24px;
     margin-left: 10px;

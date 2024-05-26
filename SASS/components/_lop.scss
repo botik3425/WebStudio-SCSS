@@ -1,81 +1,129 @@
 /*portfolio LOP(list of products) */
 .lop {
-    padding-bottom: 94px;
-    overflow: hidden;
-  }
-  .lop-products {
+  padding-bottom: 94px;
+  overflow: hidden;
+
+  &__products {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
-  .lop-tag {
+  &__tag {
     color: $for-grey-parts;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.88;
     letter-spacing: 0.03em;
   }
-  
-  .lop-slog {
+
+  &__slog {
     color: $for-true-black-parts;
     font-size: 18px;
     font-weight: 700;
     line-height: 2;
     letter-spacing: 0.06em;
-  
+
     margin-top: 20px;
     margin-bottom: 4px;
   }
-  .lop-product {
+  &__product {
     background-color: $for-true-white-parts;
     border: 1px solid $for-strange-white-parts;
     flex-basis: calc((100% - 2 * 30px) / 3);
     height: 404px;
     padding-bottom: 20px;
+
+    &:first-child {
+      animation-name: enter-from-upleft;
+      animation-duration: 1s;
+    }
+
+    &:nth-child(2) {
+      animation-name: enter-from-up;
+      animation-duration: 1s;
+    }
+
+    &:nth-child(3) {
+      animation-name: enter-from-upright;
+      animation-duration: 1s;
+    }
+
+    &:nth-child(4) {
+      animation-name: enter-from-left;
+      animation-duration: 1s;
+    }
+
+    &:nth-child(5) {
+      animation-name: enter-from-center;
+      animation-duration: 1s;
+    }
+
+    &:nth-child(6) {
+      animation-name: enter-from-right;
+      animation-duration: 1s;
+    }
+
+    &:nth-child(7) {
+      animation-name: enter-from-downleft;
+      animation-duration: 1s;
+    }
+
+    &:nth-child(8) {
+      animation-name: enter-from-down;
+      animation-duration: 1s;
+    }
+
+    &:last-child {
+      animation-name: enter-from-downright;
+      animation-duration: 1s;
+    }
   }
-  
-  .lop-card-container {
+
+  &__card__container {
     height: 404px;
     display: block;
     position: relative;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: box-shadow;
     transition-duration: 250ms;
+
+    &:hover,
+    &:focus {
+      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .overlay,
+    &:focus .overlay {
+      background-color: rgba(33, 150, 243, 0.9);
+      width: 370px;
+      height: 294px;
+      position: absolute;
+      transform: scaleY(1);
+      transform-origin: bottom;
+    }
+
+    &:hover .overlay__text,
+    &:focus .overlay__text {
+      opacity: 1;
+    }
   }
-  
-  .lop-card-container:hover,
-  .lop-card-container:focus {
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
-  }
-  .lop-text {
+
+  &__text {
     padding-left: 24px;
   }
-  
-  .lop-rad-container {
+
+  &__rad__container {
     display: block;
   }
-  
-  .overlay{
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transform: scaleY(0);
-  }
-  
-  .lop-card-container:hover .overlay, .lop-card-container:focus .overlay{
-    background-color: rgba(33, 150, 243, 0.9);
-    width: 370px;
-  height: 294px;
-  position: absolute;
-  transform: scaleY(1);
-  transform-origin: bottom;
-  }
-  
-  .lop-card-container:hover .overlay-text, .lop-card-container:focus .overlay-text{
-  opacity: 1;
-  }
-  
-  .overlay-text{
+}
+
+.overlay {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transform: scaleY(0);
+
+  &__text {
     position: absolute;
     opacity: 0;
     left: 24px;
@@ -84,7 +132,7 @@
     transition-property: opacity;
     transition-duration: 250ms;
     color: $for-true-white-parts;
-  
+
     font-family: Roboto;
     font-size: 18px;
     font-style: normal;
@@ -93,48 +141,4 @@
     letter-spacing: 0.54px;
     position: absolute;
   }
-  
-  .lop-product:first-child{
-    animation-name: enter-from-upleft;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:nth-child(2){
-    animation-name: enter-from-up;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:nth-child(3){
-    animation-name: enter-from-upright;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:nth-child(4){
-    animation-name: enter-from-left;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:nth-child(5){
-    animation-name: enter-from-center;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:nth-child(6){
-    animation-name: enter-from-right;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:nth-child(7){
-    animation-name: enter-from-downleft;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:nth-child(8){
-    animation-name: enter-from-down;
-    animation-duration: 1s;
-  }
-  
-  .lop-product:last-child{
-    animation-name: enter-from-downright;
-    animation-duration: 1s;
-  }
+}

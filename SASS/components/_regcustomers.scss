@@ -1,11 +1,10 @@
 /* Regular customers(regcustomers) */
 
 .regcustomers {
-    padding: 94px 0px;
-    overflow: hidden;
-  }
-  
-  .regcustomers-title {
+  padding: 94px 0px;
+  overflow: hidden;
+
+  &__title {
     color: $for-black-parts;
     margin-bottom: 50px;
     text-align: center;
@@ -15,16 +14,16 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1.08px;
-      animation-name: enter-from-up;
-      animation-duration: 1s;
+    animation-name: enter-from-up;
+    animation-duration: 1s;
   }
-  
-  .regcustomers-icons {
+
+  &__icons {
     display: flex;
     column-gap: 30px;
   }
-  
-  .regcustomers-icon-link {
+
+  &__icon__link {
     width: 170px;
     height: 92px;
     border: $for-strange-grey-parts 1px solid;
@@ -33,19 +32,33 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: border;
     transition-duration: 250ms;
-  }
-  
-  .regcustomers-icon-link:first-child, .regcustomers-icon-link:nth-child(2), .regcustomers-icon-link:nth-child(3){
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
       animation-name: enter-from-left;
       animation-duration: 1s;
+    }
+
+    &:last-child,
+    &:nth-child(5),
+    &:nth-child(4) {
+      animation-name: enter-from-right;
+      animation-duration: 1s;
+    }
+
+    &:hover .regcustomers__icon,
+    &:focus .regcustomers__icon {
+      fill: $for-blue-parts;
+    }
+
+    &:hover,
+    &:focus {
+      border: $for-blue-parts 1px solid;
+    }
   }
-  
-  .regcustomers-icon-link:last-child, .regcustomers-icon-link:nth-child(5), .regcustomers-icon-link:nth-child(4){
-    animation-name: enter-from-right;
-    animation-duration: 1s;
-  }
-  
-  .regcustomers-icon {
+
+  &__icon {
     width: 170px;
     height: 92px;
     fill: $for-strange-grey-parts;
@@ -53,14 +66,4 @@
     transition-property: fill;
     transition-duration: 250ms;
   }
-  
-  .regcustomers-icon-link:hover .regcustomers-icon,
-  .regcustomers-icon-link:focus .regcustomers-icon {
-    fill: $for-blue-parts;
-  }
-  
-  .regcustomers-icon-link:hover,
-  .regcustomers-icon-link:focus {
-    border: $for-blue-parts 1px solid;
-  }
-  
+}
