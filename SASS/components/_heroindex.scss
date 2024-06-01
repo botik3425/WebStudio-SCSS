@@ -35,9 +35,7 @@
       height: 50px;
       outline: none;
       border: none;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-property: box-shadow, background-color;
-      transition-duration: 250ms;
+      @include transition ($property: box-shadow, background-color);
       animation-name: enter-from-right;
       animation-duration: 1s;
 

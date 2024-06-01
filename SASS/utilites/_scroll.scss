@@ -5,8 +5,7 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
-    transition-property: width, height;
-    transition-duration: 250ms;
+    @include transition ($property: width, height);
     background-color: $for-grey-parts;
     padding: 15px 15px;
     display: flex;
@@ -27,7 +26,6 @@
     &__icon{
       width: 70px;
       height: 70px;
-      transition-property: width, height;
-      transition-duration: 250ms;
+      @include transition ($property: width, height);
     }
   }

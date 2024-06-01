@@ -83,9 +83,7 @@
     height: 404px;
     display: block;
     position: relative;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: box-shadow;
-    transition-duration: 250ms;
+    @include transition ($property: box-shadow);
 
     &:hover,
     &:focus {
@@ -118,9 +116,7 @@
 }
 
 .overlay {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform;
-  transition-duration: 250ms;
+  @include transition ($property: transform);
   transform: scaleY(0);
 
   &__text {
@@ -128,9 +124,7 @@
     opacity: 0;
     left: 24px;
     top: 63px;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: opacity;
-    transition-duration: 250ms;
+    @include transition ($property: opacity);
     color: $for-true-white-parts;
 
     font-family: Roboto;

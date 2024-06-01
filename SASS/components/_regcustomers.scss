@@ -62,8 +62,6 @@
     width: 170px;
     height: 92px;
     fill: $for-strange-grey-parts;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: fill;
-    transition-duration: 250ms;
+    @include transition ($property: fill);
   }
 }

@@ -39,9 +39,7 @@
     width: 44px;
     height: 44px;
     padding: 12px;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: background-color, fill;
-    transition-duration: 250ms;
+    @include transition ($property: background-color, fill);
 
     &:hover,
     &:focus {
