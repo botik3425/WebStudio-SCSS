@@ -14,8 +14,7 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1.08px;
-    animation-name: enter-from-up;
-    animation-duration: 1s;
+    @include animation ($name: enter-from-up);
   }
 
   &__icons {
@@ -29,22 +28,18 @@
     border: $for-strange-grey-parts 1px solid;
     border-radius: 4px;
     cursor: pointer;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: border;
-    transition-duration: 250ms;
+    @include transition ($property: border, $property2: none, $property3:none);
 
     &:first-child,
     &:nth-child(2),
     &:nth-child(3) {
-      animation-name: enter-from-left;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-left);
     }
 
     &:last-child,
     &:nth-child(5),
     &:nth-child(4) {
-      animation-name: enter-from-right;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-right);
     }
 
     &:hover .regcustomers__icon,
@@ -59,9 +54,8 @@
   }
 
   &__icon {
-    width: 170px;
-    height: 92px;
+    @include area ($height:92px, $width:170px);
     fill: $for-strange-grey-parts;
-    @include transition ($property: fill);
+    @include transition ($property: fill, $property2: none, $property3:none);
   }
 }

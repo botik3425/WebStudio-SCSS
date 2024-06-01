@@ -19,8 +19,7 @@
       letter-spacing: 0.06em;
       max-width: 696px;
       text-align: center;
-      animation-name: enter-from-left;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-left);
     }
     
     &__button {
@@ -31,13 +30,11 @@
       line-height: 1.88;
       letter-spacing: 0.06em;
       border-radius: 4px;
-      width: 216px;
-      height: 50px;
+      @include area ($height:50px, $width:216px);
       outline: none;
       border: none;
-      @include transition ($property: box-shadow, background-color);
-      animation-name: enter-from-right;
-      animation-duration: 1s;
+      @include transition ($property: box-shadow, $property2: background-color, $property3:none);
+      @include animation ($name: enter-from-right);
 
         
   &:focus,

@@ -4,8 +4,7 @@
     padding-bottom: 60px;
     padding-top: 60px;
     background-color: $for-black-parts;
-    animation-name: enter-from-down;
-    animation-duration: 1s;
+    @include animation ($name: enter-from-down);
 
         
   &__logo {
@@ -56,7 +55,7 @@
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    @include transition ($property: color);
+    @include transition ($property: color, $property2: none, $property3:none);
   }
 
   &__tele{
@@ -100,20 +99,18 @@
   }
   
   &__icon {
-    width: 20px;
-    height: 20px;
+    @include area ($height:20px, $width:20px);
     fill: $for-true-white-parts;
   }
   
   &__icon__link {
-    width: 44px;
-    height: 44px;
+    @include area ($height:44px, $width:44px);
     padding: 12px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 23px;
     cursor: pointer;
     display: block;
-    @include transition ($property: background-color);
+    @include transition ($property: background-color, $property2:none, $property3:none);
 
     &:hover,
     &:focus {
@@ -123,7 +120,7 @@
   
   &__form {
     margin-left: 93px;
-    width: 570px;
+    @include area ($height:none, $width:570px);
   }
   
   &__form__container {
@@ -143,8 +140,7 @@
   }
   
   &__form__input {
-    width: 358px;
-    height: 50px;
+    @include area ($height:50px, $width:358px);
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -167,8 +163,7 @@
   }
 
   &__form__button {
-    width: 200px;
-    height: 50px;
+    @include area ($height:50px, $width:200px);
     flex-shrink: 0;
     border-radius: 4px;
     background: $for-blue-parts;
@@ -185,7 +180,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include transition ($property: box-shadow);
+    @include transition ($property: box-shadow, $property2: none, $property3:none);
       
   &:hover{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
@@ -194,8 +189,7 @@
   }
   
   &__form__icon {
-    width: 24px;
-    height: 24px;
+    @include area ($height:24px, $width:24px);
     margin-left: 10px;
     padding-top: 3px;
     padding-bottom: 3px;

@@ -19,7 +19,7 @@
       padding: 6px 22px;
       outline: none;
       border: none;
-      @include transition ($property: background-color, color, box-shadow);
+      @include transition ($property: background-color, $property2: color, $property3: box-shadow);
 
       &:hover,
       &:focus {
@@ -41,18 +41,15 @@
 
         
   &:first-child, &:nth-child(2){
-    animation-name: enter-from-left;
-    animation-duration: 1s;
+    @include animation ($name: enter-from-left);
   }
   
   &:nth-child(3){
-    animation-name: enter-from-up;
-    animation-duration: 1s;
+    @include animation ($name: enter-from-up);
   }
   
   &:nth-child(4), &:last-child{
-    animation-name: enter-from-right;
-    animation-duration: 1s;
+    @include animation ($name: enter-from-right);
   }
     }
 

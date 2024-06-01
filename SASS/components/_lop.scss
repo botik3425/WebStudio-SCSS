@@ -30,60 +30,51 @@
     background-color: $for-true-white-parts;
     border: 1px solid $for-strange-white-parts;
     flex-basis: calc((100% - 2 * 30px) / 3);
-    height: 404px;
+    @include area ($height:404px, $width:370px);
     padding-bottom: 20px;
 
     &:first-child {
-      animation-name: enter-from-upleft;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-upleft);
     }
 
     &:nth-child(2) {
-      animation-name: enter-from-up;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-up);
     }
 
     &:nth-child(3) {
-      animation-name: enter-from-upright;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-upright);
     }
 
     &:nth-child(4) {
-      animation-name: enter-from-left;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-left);
     }
 
     &:nth-child(5) {
-      animation-name: enter-from-center;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-center);
     }
 
     &:nth-child(6) {
-      animation-name: enter-from-right;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-right);
     }
 
     &:nth-child(7) {
-      animation-name: enter-from-downleft;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-downleft);
     }
 
     &:nth-child(8) {
-      animation-name: enter-from-down;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-down);
     }
 
     &:last-child {
-      animation-name: enter-from-downright;
-      animation-duration: 1s;
+      @include animation ($name: enter-from-downright);
     }
   }
 
   &__card__container {
-    height: 404px;
+    @include area ($height:404px, $width:none);
     display: block;
     position: relative;
-    @include transition ($property: box-shadow);
+    @include transition ($property: box-shadow, $property2: none, $property3:none);
 
     &:hover,
     &:focus {
@@ -93,8 +84,7 @@
     &:hover .overlay,
     &:focus .overlay {
       background-color: rgba(33, 150, 243, 0.9);
-      width: 370px;
-      height: 294px;
+      @include area ($height:294px, $width:370px);
       position: absolute;
       transform: scaleY(1);
       transform-origin: bottom;
@@ -116,7 +106,7 @@
 }
 
 .overlay {
-  @include transition ($property: transform);
+  @include transition ($property: transform, $property2: none, $property3:none);
   transform: scaleY(0);
 
   &__text {
@@ -124,7 +114,7 @@
     opacity: 0;
     left: 24px;
     top: 63px;
-    @include transition ($property: opacity);
+    @include transition ($property: opacity, $property2: none, $property3:none);
     color: $for-true-white-parts;
 
     font-family: Roboto;

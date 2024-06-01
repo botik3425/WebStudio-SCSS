@@ -1,5 +1,15 @@
-@mixin transitions ($property) {
+@mixin transition ($property, $property2, $property3) {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-    transition-property: $property;
+    transition-property: $property, $property2, $property3;
+}
+
+@mixin animation ($name) {
+    animation-name: $name;
+    animation-duration: 1s;
+}
+
+@mixin area ($height, $width){
+    height: $height;
+    width: $width;
 }

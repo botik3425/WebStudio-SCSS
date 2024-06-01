@@ -2,13 +2,12 @@
   position: fixed;
     top: 0;
     bottom: 0;
-    width: 50px;
+    @include area ($height:none, $width:50px);
     background-color: $for-grey-parts;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation-name: enter-from-left;
-    animation-duration: 1s;
+    @include animation ($name: enter-from-left);
 
     &__title{
       writing-mode: vertical-lr;
@@ -23,11 +22,11 @@
     top: 0;
     bottom: 0;
     background-color: $for-grey-parts;
-    width: 50px;
+    @include area ($height:none, $width:50px);
     display: flex;
     align-items: center;
     padding-left: 10px;
-    @include transition ($property: width);
+    @include transition ($property: width, $property2: none, $property3:none);
   &__icon{
     fill: $for-orange-parts;
     width: 20px;
@@ -41,7 +40,7 @@
   
   &__text{
     color: $for-true-white-parts;
-    @include transition ($property: color);
+    @include transition ($property: color, $property2: none, $property3:none);
     
     &:hover{
       color: $for-orange-parts;

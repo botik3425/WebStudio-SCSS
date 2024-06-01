@@ -88,13 +88,14 @@
 }
 .scroll__button {
   border-radius: 100px;
-  width: 100px;
   height: 100px;
+  width: 100px;
   position: fixed;
   bottom: 50px;
   right: 50px;
-  transition-property: width, height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+  transition-property: width, height, none;
   background-color: #757575;
   padding: 15px 15px;
   display: flex;
@@ -102,18 +103,19 @@
   align-items: center;
 }
 .scroll__button:hover {
-  width: 110px;
   height: 110px;
+  width: 110px;
 }
 .scroll__button:hover .scroll__button__icon {
-  width: 80px;
   height: 80px;
+  width: 80px;
 }
 .scroll__button__icon {
-  width: 70px;
   height: 70px;
-  transition-property: width, height;
+  width: 70px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+  transition-property: width, height, none;
 }
 
 ul,
@@ -199,6 +201,7 @@ button {
   border: #eeeeee 1px solid;
   position: fixed;
   background-color: #ffffff;
+  height: none;
   width: 100%;
   z-index: 2;
   animation-name: enter-from-up;
@@ -235,13 +238,12 @@ button {
   letter-spacing: 0.02em;
   word-wrap: break-word;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color;
   transition-duration: 250ms;
-  transition-property: color;
+  transition-property: color, none, none;
 }
 .head__page::after {
-  width: 100%;
   height: 4px;
+  width: 100%;
   content: "";
   display: block;
   background-color: #2196f3;
@@ -249,10 +251,10 @@ button {
   opacity: 0;
   position: absolute;
   top: 45px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: scaleX(0);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  transition-property: transform;
+  transition-property: transform, none, none;
 }
 .head__page:hover, .head__page:focus {
   color: #2196f3;
@@ -273,17 +275,17 @@ button {
   letter-spacing: 0.02em;
   word-wrap: break-word;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color;
   transition-duration: 250ms;
+  transition-property: color, none, none;
 }
 .head__icon__mail {
-  width: 16px;
   height: 12px;
+  width: 16px;
   margin-right: 10px;
   fill: #757575;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
   transition-duration: 250ms;
+  transition-property: fill, none, none;
 }
 .head__icon__tel {
   margin-right: 10px;
@@ -291,8 +293,8 @@ button {
   height: 16px;
   fill: #757575;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
   transition-duration: 250ms;
+  transition-property: fill, none, none;
 }
 .head__tel {
   display: flex;
@@ -350,7 +352,8 @@ button {
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   flex-basis: calc((100% - 60px) / 3);
-  height: 404px;
+  height: none;
+  width: 404px;
   padding-bottom: 20px;
 }
 .lop__product:first-child {
@@ -390,20 +393,21 @@ button {
   animation-duration: 1s;
 }
 .lop__card__container {
-  height: 404px;
+  height: none;
+  width: 404px;
   display: block;
   position: relative;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: box-shadow;
   transition-duration: 250ms;
+  transition-property: box-shadow, none, none;
 }
 .lop__card__container:hover, .lop__card__container:focus {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
 }
 .lop__card__container:hover .overlay, .lop__card__container:focus .overlay {
   background-color: rgba(33, 150, 243, 0.9);
-  width: 370px;
   height: 294px;
+  width: 370px;
   position: absolute;
   transform: scaleY(1);
   transform-origin: bottom;
@@ -420,8 +424,8 @@ button {
 
 .overlay {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform;
   transition-duration: 250ms;
+  transition-property: transform, none, none;
   transform: scaleY(0);
 }
 .overlay__text {
@@ -430,8 +434,8 @@ button {
   left: 24px;
   top: 63px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: opacity;
   transition-duration: 250ms;
+  transition-property: opacity, none, none;
   color: #ffffff;
   font-family: Roboto;
   font-size: 18px;
@@ -494,8 +498,8 @@ button {
   line-height: 1.71;
   letter-spacing: 0.03em;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color;
   transition-duration: 250ms;
+  transition-property: color, none, none;
 }
 .basement__tele:hover {
   color: #2196f3;
@@ -529,27 +533,28 @@ button {
   text-transform: uppercase;
 }
 .basement__icon {
-  width: 20px;
   height: 20px;
+  width: 20px;
   fill: #ffffff;
 }
 .basement__icon__link {
-  width: 44px;
   height: 44px;
+  width: 44px;
   padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 23px;
   cursor: pointer;
   display: block;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color;
   transition-duration: 250ms;
+  transition-property: background-color, none, none;
 }
 .basement__icon__link:hover, .basement__icon__link:focus {
   background-color: #2196f3;
 }
 .basement__form {
   margin-left: 93px;
+  height: none;
   width: 570px;
 }
 .basement__form__container {
@@ -567,8 +572,8 @@ button {
   margin-bottom: 20px;
 }
 .basement__form__input {
-  width: 358px;
   height: 50px;
+  width: 358px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -597,8 +602,8 @@ button {
   letter-spacing: 0.48px;
 }
 .basement__form__button {
-  width: 200px;
   height: 50px;
+  width: 200px;
   flex-shrink: 0;
   border-radius: 4px;
   background: #2196f3;
@@ -616,15 +621,15 @@ button {
   justify-content: center;
   align-items: center;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: box-shadow;
   transition-duration: 250ms;
+  transition-property: box-shadow, none, none;
 }
 .basement__form__button:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
 }
 .basement__form__icon {
-  width: 24px;
   height: 24px;
+  width: 24px;
   margin-left: 10px;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -652,8 +657,8 @@ button {
   outline: none;
   border: none;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
+  transition-property: background-color, color, box-shadow;
 }
 .heroport__blacktag:hover, .heroport__blacktag:focus {
   background-color: #2196f3;
@@ -687,6 +692,7 @@ button {
   position: fixed;
   top: 0;
   bottom: 0;
+  height: none;
   width: 50px;
   background-color: #757575;
   display: flex;
@@ -706,13 +712,14 @@ button {
   top: 0;
   bottom: 0;
   background-color: #757575;
+  height: none;
   width: 50px;
   display: flex;
   align-items: center;
   padding-left: 10px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  transition-property: width;
+  transition-property: width, none, none;
 }
 .backmenu__opened__icon {
   fill: #f1b31c;
@@ -727,7 +734,7 @@ button {
   color: #ffffff;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  transition-property: color;
+  transition-property: color, none, none;
 }
 .backmenu__opened__text:hover {
   color: #f1b31c;
