@@ -352,8 +352,8 @@ button {
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   flex-basis: calc((100% - 60px) / 3);
-  height: none;
-  width: 404px;
+  height: 404px;
+  width: 370px;
   padding-bottom: 20px;
 }
 .lop__product:first-child {
@@ -393,8 +393,8 @@ button {
   animation-duration: 1s;
 }
 .lop__card__container {
-  height: none;
-  width: 404px;
+  height: 404px;
+  width: none;
   display: block;
   position: relative;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
