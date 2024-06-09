@@ -179,10 +179,36 @@ button {
 .pluses__container,
 .basement__container,
 .regcustomers__container {
-  /* outline: solid red 2px; */
-  width: 1200px;
+  outline: solid red 2px;
   margin: 0 auto;
-  padding: 0 15px;
+  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .lop__container,
+  .head__container,
+  .wwd__container,
+  .ourteam__container,
+  .hero__container,
+  .heroport__container,
+  .pluses__container,
+  .basement__container,
+  .regcustomers__container {
+    max-width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lop__container,
+  .head__container,
+  .wwd__container,
+  .ourteam__container,
+  .hero__container,
+  .heroport__container,
+  .pluses__container,
+  .basement__container,
+  .regcustomers__container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
 }
 
 .all {
@@ -196,41 +222,76 @@ button {
 }
 
 .head {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding: 16px 0px;
   border: #eeeeee 1px solid;
   position: fixed;
   background-color: #ffffff;
-  height: none;
+  height: 60px;
   width: 100%;
   z-index: 2;
   animation-name: enter-from-up;
   animation-duration: 1s;
+}
+@media screen and (min-width: 763px) {
+  .head {
+    padding: 26px 0px;
+    height: 80px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    height: 80px;
+    width: 100%;
+  }
 }
 .head__container {
   display: flex;
 }
 .head__logobluepart {
   color: #2196f3;
-  font-size: 26px;
+  font-size: 24px;
   font-family: Raleway;
   font-weight: 700;
   letter-spacing: 0.03em;
   word-wrap: break-word;
+}
+@media screen and (min-width: 763px) {
+  .head__logobluepart {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__logobluepart {
+    font-size: 26px;
+  }
 }
 .head__logo {
   background-image: linear-gradient(90deg, #2196f3, #212121);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 144px 31.2px;
+  margin-right: 93px;
 }
 .head__logoblackpart {
   color: #212121;
-  font-size: 26px;
+  font-size: 24px;
   font-family: Raleway;
   font-weight: 700;
   letter-spacing: 0.03em;
   word-wrap: break-word;
+}
+@media screen and (min-width: 763px) {
+  .head__logoblackpart {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__logoblackpart {
+    font-size: 26px;
+  }
 }
 .head__page {
   color: #212121;
@@ -240,6 +301,23 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: color, none, none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+@media screen and (min-width: 763px) {
+  .head__page {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__page {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
 }
 .head__page::after {
   height: 4px;
@@ -248,13 +326,29 @@ button {
   display: block;
   background-color: #2196f3;
   border-radius: 2px;
-  opacity: 0;
   position: absolute;
   top: 45px;
   transform: scaleX(0);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: transform, none, none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+@media screen and (min-width: 763px) {
+  .head__page::after {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__page::after {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
 }
 .head__page:hover, .head__page:focus {
   color: #2196f3;
@@ -308,9 +402,6 @@ button {
   fill: #2196f3;
   color: #2196f3;
   cursor: pointer;
-}
-.head__logo {
-  margin-right: 93px;
 }
 .head__list, .head__list2 {
   -moz-column-gap: 50px;

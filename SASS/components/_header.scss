@@ -1,12 +1,22 @@
 .head {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 16px 0px;
     border: $for-strange-white-parts 1px solid;
     position: fixed;
     background-color: $for-true-white-parts;
-    @include area ($height:none, $width:100%);
+    @include area ($height:60px, $width:100%);
     z-index: 2;
     @include animation ($name: enter-from-up);
+
+    @media screen and (min-width: 763px) {
+      padding: 26px 0px;
+      @include area ($height:80px, $width:100%);
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 24px;
+    padding-bottom: 25px;
+    @include area ($height:80px, $width:100%);
+    }
 
     &__container{
       display: flex;
@@ -15,11 +25,17 @@
       
   &__logobluepart {
     color: $for-blue-parts;
-    font-size: 26px;
+    font-size: 24px;
     font-family: Raleway;
     font-weight: 700;
     letter-spacing: 0.03em;
     word-wrap: break-word;
+    @media screen and (min-width: 763px) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+    }
   }
   
   &__logo{
@@ -27,15 +43,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 144px 31.2px;
+  margin-right: 93px;
+  
   }
   
   &__logoblackpart {
     color: $for-true-black-parts;
-    font-size: 26px;
+    font-size: 24px;
     font-family: Raleway;
     font-weight: 700;
     letter-spacing: 0.03em;
     word-wrap: break-word;
+    @media screen and (min-width: 763px) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+    }
   }
   
   &__page {
@@ -44,19 +68,43 @@
     letter-spacing: 0.02em;
     word-wrap: break-word;
     @include transition ($property: color, $property2: none, $property3:none);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    @media screen and (min-width: 763px) {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+    }
+    @media screen and (min-width: 1200px) {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+    }
 
-      
   &::after{
     @include area ($height:4px, $width:100%);
     content: '';
     display: block;
     background-color: $for-blue-parts;
     border-radius: 2px;
-    opacity: 0;
     position: absolute;
     top: 45px;
     transform: scaleX(0);
     @include transition ($property: transform, $property2: none, $property3:none);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    @media screen and (min-width: 763px) {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+    }
+    @media screen and (min-width: 1200px) {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+    }
   }
   
   &:hover,
@@ -122,10 +170,7 @@
     color: $for-blue-parts;
     cursor: pointer;
   }
-  
-  &__logo {
-    margin-right: 93px;
-  }
+
   &__list,
   &__list2 {
     column-gap: 50px;

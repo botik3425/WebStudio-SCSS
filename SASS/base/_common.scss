@@ -7,10 +7,16 @@
 .pluses__container,
 .basement__container,
 .regcustomers__container {
-  /* outline: solid red 2px; */
-  width: 1200px;
+  outline: solid red 2px;
   margin: 0 auto;
-  padding: 0 15px;
+  max-width: 450px;
+  @media screen and (min-width: 768px) {
+    max-width: 738px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
 }
 
 .all {
