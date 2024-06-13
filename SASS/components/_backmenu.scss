@@ -1,61 +1,60 @@
-.backmenu__closed{
+.backmenu__closed {
   position: fixed;
-    top: 0;
-    bottom: 0;
-    @include area ($height:none, $width:50px);
-    background-color: $for-grey-parts;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include animation ($name: enter-from-left);
+  top: 0;
+  bottom: 0;
+  @include area($height: none, $width: 50px);
+  background-color: $for-grey-parts;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include animation($name: enter-from-left);
 
-    &__title{
-      writing-mode: vertical-lr;
-      color: $for-true-white-parts;
-    }
+  &__title {
+    writing-mode: vertical-lr;
+    color: $for-true-white-parts;
+  }
 }
 
-
-.backmenu__opened{
-    opacity: 0; 
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    background-color: $for-grey-parts;
-    @include area ($height:none, $width:50px);
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    @include transition ($property: width, $property2: none, $property3:none);
-  &__icon{
+.backmenu__opened {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: $for-grey-parts;
+  @include area($height: none, $width: 50px);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  @include transition($property: width, $property2: none, $property3: none);
+  &__icon {
     fill: $for-orange-parts;
     width: 20px;
     height: 20px;
   }
-  
-  &:hover{
+
+  &:hover {
     opacity: inherit;
     width: 300px;
   }
-  
-  &__text{
+
+  &__text {
     color: $for-true-white-parts;
-    @include transition ($property: color, $property2: none, $property3:none);
-    
-    &:hover{
+    @include transition($property: color, $property2: none, $property3: none);
+
+    &:hover {
       color: $for-orange-parts;
     }
   }
-  
-  &__item{
+
+  &__item {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  
-  &__list{
+
+  &__list {
     gap: 10px;
     display: flex;
     flex-direction: column;
   }
-  }
+}

@@ -1,22 +1,19 @@
-
 /* Basement */
 .basement {
-    padding-bottom: 60px;
-    padding-top: 60px;
-    background-color: $for-black-parts;
-    @include animation ($name: enter-from-down);
+  padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: $for-black-parts;
+  @include animation($name: enter-from-down);
 
-        
   &__logo {
     margin-bottom: 20px;
     display: block;
     background: linear-gradient(90deg, $for-blue-parts, $for-true-white-parts);
-  -webkit-background-clip: text;
-  background-size: 144px 31.2px;
-  -webkit-text-fill-color:
-  transparent;
+    -webkit-background-clip: text;
+    background-size: 144px 31.2px;
+    -webkit-text-fill-color: transparent;
   }
-  
+
   &__logobluepart {
     color: $for-blue-parts;
     font-size: 26px;
@@ -32,7 +29,7 @@
     font-weight: 700;
     letter-spacing: 0.03em;
   }
-  
+
   &__adress {
     color: $for-true-white-parts;
     font-weight: 400;
@@ -41,7 +38,7 @@
     font-style: normal;
     width: 231px;
   }
-  
+
   &__container {
     flex-direction: row;
     justify-content: start;
@@ -55,37 +52,37 @@
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    @include transition ($property: color, $property2: none, $property3:none);
+    @include transition($property: color, $property2: none, $property3: none);
   }
 
-  &__tele{
+  &__tele {
     &:hover {
       color: $for-blue-parts;
     }
   }
 
-  &__mail{
-    &:hover{
+  &__mail {
+    &:hover {
       color: $for-blue-parts;
     }
   }
-  
+
   &__list {
     margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     row-gap: 9px;
   }
-  
+
   &__icons {
     margin-left: 70px;
   }
-  
+
   &__icon__list {
     display: flex;
     column-gap: 10px;
   }
-  
+
   &__icon__title {
     color: $for-true-white-parts;
     margin-bottom: 20px;
@@ -97,36 +94,40 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
   }
-  
+
   &__icon {
-    @include area ($height:20px, $width:20px);
+    @include area($height: 20px, $width: 20px);
     fill: $for-true-white-parts;
   }
-  
+
   &__icon__link {
-    @include area ($height:44px, $width:44px);
+    @include area($height: 44px, $width: 44px);
     padding: 12px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 23px;
     cursor: pointer;
     display: block;
-    @include transition ($property: background-color, $property2:none, $property3:none);
+    @include transition(
+      $property: background-color,
+      $property2: none,
+      $property3: none
+    );
 
     &:hover,
     &:focus {
       background-color: $for-blue-parts;
     }
   }
-  
+
   &__form {
     margin-left: 93px;
-    @include area ($height:none, $width:570px);
+    @include area($height: none, $width: 570px);
   }
-  
+
   &__form__container {
     display: flex;
   }
-  
+
   &__form__title {
     color: $for-true-white-parts;
     font-family: Roboto;
@@ -138,9 +139,9 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  
+
   &__form__input {
-    @include area ($height:50px, $width:358px);
+    @include area($height: 50px, $width: 358px);
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -150,20 +151,19 @@
     padding-left: 16px;
     color: $for-true-white-parts;
 
-      
-  &::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 125% */
-    letter-spacing: 0.48px;
-  }
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 125% */
+      letter-spacing: 0.48px;
+    }
   }
 
   &__form__button {
-    @include area ($height:50px, $width:200px);
+    @include area($height: 50px, $width: 200px);
     flex-shrink: 0;
     border-radius: 4px;
     background: $for-blue-parts;
@@ -180,19 +180,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include transition ($property: box-shadow, $property2: none, $property3:none);
-      
-  &:hover{
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
+    @include transition(
+      $property: box-shadow,
+      $property2: none,
+      $property3: none
+    );
+
+    &:hover {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
+    }
   }
 
-  }
-  
   &__form__icon {
-    @include area ($height:24px, $width:24px);
+    @include area($height: 24px, $width: 24px);
     margin-left: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
     fill: $for-true-white-parts;
   }
-  }
+}

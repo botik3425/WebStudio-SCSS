@@ -1,6 +1,6 @@
-.heroindex{
-    overflow: hidden;
-    background-image: linear-gradient(
+.heroindex {
+  overflow: hidden;
+  background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
@@ -9,58 +9,99 @@
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
+  @include area($width: 480px, $height: 400px);
+  background-size: 480px 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
-    &__whiteslog {
-      color: $for-true-white-parts;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include area($width: 768px, $height: 400px);
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-size: 768px 400px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include area($width: 1200px, $height: 600px);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-size: 1200px 600px;
+  }
+
+  &__whiteslog {
+    color: $for-true-white-parts;
+    text-align: center;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 42px; /* 161.538% */
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+    @include animation($name: enter-from-left);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      font-size: 26px;
+      line-height: 42px; /* 161.538% */
+      letter-spacing: 1.56px;
+      max-width: 360px;
+    }
+    @media screen and (min-width: 1200px) {
       font-size: 44px;
-      font-weight: 900;
-      text-transform: uppercase;
       line-height: 1.36;
       letter-spacing: 0.06em;
       max-width: 696px;
-      text-align: center;
-      @include animation ($name: enter-from-left);
     }
-    
-    &__button {
-      background-color: $for-blue-parts;
-      color: $for-true-white-parts;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1.88;
-      letter-spacing: 0.06em;
-      border-radius: 4px;
-      @include area ($height:50px, $width:216px);
-      outline: none;
-      border: none;
-      @include transition ($property: box-shadow, $property2: background-color, $property3:none);
-      @include animation ($name: enter-from-right);
-
-        
-  &:focus,
-  &:hover {
-    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px;
-    background-color: rgb(17, 91, 152);
   }
-  
-  &:active,
-  &:focus {
+
+  &__button {
+    background-color: $for-blue-parts;
+    color: $for-true-white-parts;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    @include area($height: 50px, $width: 200px);
     outline: none;
     border: none;
-  }
+    @include transition(
+      $property: box-shadow,
+      $property2: background-color,
+      $property3: none
+    );
+    @include animation($name: enter-from-right);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include area($height: 50px, $width: 200px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include area($height: 50px, $width: 216px);
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.5) 5px 5px;
+      background-color: rgb(17, 91, 152);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      border: none;
     }
   }
+}
 
-  
-  .hero__container {
-    justify-content: center;
-    row-gap: 30px;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-  }
+.hero__container {
+  justify-content: center;
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
 
-  .head__item:first-child .head__page:after{
-    opacity: 1;
-    transform: scaleX(1);
-  }
+.head__item:first-child .head__page:after {
+  opacity: 1;
+  transform: scaleX(1);
+}

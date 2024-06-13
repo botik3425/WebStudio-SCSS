@@ -11,22 +11,31 @@
 
   &__slog {
     color: $for-true-black-parts;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 50px;
-    @include animation ($name: enter-from-up);
+    @include animation($name: enter-from-up);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      font-size: 28px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+    }
   }
 
   &__icons {
     padding: 0px 32px;
     display: flex;
     column-gap: 10px;
+    justify-content: center;
   }
 
   &__icon {
-    @include area ($height:20px, $width:20px);
+    @include area($height: 20px, $width: 20px);
     fill: $for-strange-grey-parts;
     cursor: pointer;
     /* padding: 12px; */
@@ -34,9 +43,13 @@
 
   &__icon__link {
     border-radius: 23px;
-    @include area($height:44px, $width:44px);
+    @include area($height: 44px, $width: 44px);
     padding: 12px;
-    @include transition ($property: background-color, $property2: fill, $property3:none);
+    @include transition(
+      $property: background-color,
+      $property2: fill,
+      $property3: none
+    );
 
     &:hover,
     &:focus {
@@ -69,8 +82,16 @@
   }
   &__list {
     display: flex;
-    column-gap: 30px;
+    row-gap: 30px;
     flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      gap: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      column-gap: 30px;
+    }
   }
   &__item {
     background-color: $for-true-white-parts;
@@ -78,19 +99,36 @@
     padding-bottom: 30px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    @include area($width: 450px, $height: 622px);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include area($width: 354px, $height: 536px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include area($width: 270px, $height: 428px);
+    }
 
     &:first-child,
     &:nth-child(2) {
-      @include animation ($name: enter-from-left);
+      @include animation($name: enter-from-left);
     }
 
     &:last-child,
     &:nth-child(3) {
-      @include animation ($name: enter-from-right);
+      @include animation($name: enter-from-right);
     }
   }
 
   &__photo {
-    @include area($height:260px, $width:270px);
+    @include area($height: 460px, $width: 450px);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include area($width: 354px, $height: 374px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include area($width: 270px, $height: 260px);
+    }
   }
 }

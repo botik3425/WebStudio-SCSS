@@ -2,23 +2,32 @@
 .wwd {
   padding-bottom: 94px;
   overflow: hidden;
+  position: absolute;
+  opacity: 0;
+  @media screen and (min-width: 1200px) {
+    position: static;
+    opacity: 1;
+  }
 
   &__container {
+    position: inherit;
     justify-content: center;
     row-gap: 50px;
   }
 
   &__slog {
+    position: inherit;
     color: $for-true-black-parts;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
-    @include animation ($name: enter-from-up);
+    @include animation($name: enter-from-up);
   }
 
   &__list,
   &__item {
+    position: inherit;
     display: flex;
     column-gap: 30px;
   }
@@ -28,21 +37,21 @@
     z-index: -1;
 
     &:first-child {
-      @include animation ($name: enter-from-left);
+      @include animation($name: enter-from-left);
     }
 
     &:nth-child(2) {
-      @include animation ($name: enter-from-down);
+      @include animation($name: enter-from-down);
     }
 
     &:last-child {
-      @include animation ($name: enter-from-right);
+      @include animation($name: enter-from-right);
     }
   }
 
   &__photo__text {
     position: absolute;
-    @include area ($height:70px, $width:100%);
+    @include area($height: 70px, $width: 100%);
     padding: 27px 0px;
     background-color: rgba(47, 48, 58, 0.8);
     font-family: Roboto;
