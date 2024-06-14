@@ -3,6 +3,15 @@
 .regcustomers {
   padding: 60px 0px;
   overflow: hidden;
+  @include area ($width: 480px, $height: none);
+
+  @media screen and (min-width: 768px) and (max-width:1199px) {
+    @include area ($width: 768px, $height: none);
+  }
+
+  @media screen and (min-width:1200px) {
+    @include area ($width: 1200px, $height: none);
+  }
 
   &__container {
     display: flex;
@@ -21,6 +30,9 @@
     line-height: normal;
     letter-spacing: 1.08px;
     @include animation($name: enter-from-up);
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+    }
   }
 
   &__icons {
@@ -31,6 +43,12 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      @include area($width: 738px, $height: 214px);
+    }
+    @media screen and (min-width:1200px) {
+      @include area($width: 1170px, $height: 92px);
+    }
   }
 
   &__icon__link {

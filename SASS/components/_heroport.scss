@@ -8,6 +8,29 @@
   padding-bottom: 50px;
   padding-top: 80.5px;
   overflow: hidden;
+  @include area ($width:480px, $height:none);
+
+  @media screen and (min-width:768px) and (max-width:1199px) {
+    @include area ($width:768px, $height:none);
+  }
+  @media screen and (min-width:1200px) {
+    @include area ($width:1200px, $height:none);
+   }
+
+  &__container{
+    @include area ($width:326px, $height:91px);
+    margin-left: 15px;
+    margin-right: auto;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      @include area ($width:575px, $height:54px);
+      margin-left: auto;
+    }
+    @media screen and (min-width:1200px) {
+     margin-left: auto;
+     @include area ($width:575px, $height:54px);
+     padding: 0 10px;
+    }
+  }
 
   &__blacktag {
     background-color: $for-white-parts;
@@ -39,8 +62,9 @@
 
   &__items {
     display: flex;
-    justify-content: center;
     column-gap: 8px;
+    flex-wrap: wrap;
+    row-gap: 15px;
 
     &:first-child,
     &:nth-child(2) {

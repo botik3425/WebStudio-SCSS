@@ -4,6 +4,15 @@
   padding-top: 60px;
   background-color: $for-black-parts;
   @include animation($name: enter-from-down);
+  @include area ($width: 480px, $height: none);
+
+  @media screen and (min-width: 768px) and (max-width:1199px) {
+    @include area ($width: 768px, $height: none);
+  }
+
+  @media screen and (min-width:1200px) {
+    @include area ($width: 1200px, $height: none);
+  }
 
   &__logo {
     margin-bottom: 20px;
@@ -12,6 +21,10 @@
     -webkit-background-clip: text;
     background-size: 144px 31.2px;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+    @media screen and (min-width:1200px) {
+      text-align: start;
+    }
   }
 
   &__logobluepart {
@@ -37,14 +50,21 @@
     letter-spacing: 0.03em;
     font-style: normal;
     width: 231px;
+    text-align: center;
+    @media screen and (min-width:1200px) {
+      text-align: start;
+    }
   }
 
   &__container {
-    flex-direction: row;
-    justify-content: start;
-    align-content: normal;
+    flex-direction: column;
+    align-items: center;
     row-gap: 20px;
     display: flex;
+
+    @media screen and (min-width:1200px) {
+      flex-direction: row;
+    }
   }
   &__tele,
   &__mail {
@@ -53,6 +73,32 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     @include transition($property: color, $property2: none, $property3: none);
+    @media screen and (min-width:1200px) {
+      text-align: start;
+    }
+    
+  }
+
+  &__text__container{
+    width: 237px;
+  }
+
+  &__information{
+
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      width: 603px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width:1200px) {
+      flex-direction: row;
+      display: flex;
+      width: 507px;
+      column-gap: 70px;
+      margin-right: 93px;
+    }
   }
 
   &__tele {
@@ -74,13 +120,28 @@
     row-gap: 9px;
   }
 
+  &__item{
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width:1200px) {
+      justify-content: start;
+    }
+  }
+
   &__icons {
-    margin-left: 70px;
+    // margin-left: 70px;
+    width: 237px;
+    @media screen and (min-width:1200px) {
+      display: flex;
+      justify-content:center ;
+      flex-direction: column;
+    }
   }
 
   &__icon__list {
     display: flex;
     column-gap: 10px;
+    padding: 0px 16px;
   }
 
   &__icon__title {
@@ -93,6 +154,12 @@
     line-height: normal;
     letter-spacing: 0.42px;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 60px;
+    @media screen and (min-width:1200px) {
+      text-align: start;
+      margin-top: 0;
+    }
   }
 
   &__icon {
@@ -120,12 +187,18 @@
   }
 
   &__form {
-    margin-left: 93px;
-    @include area($height: none, $width: 570px);
+    // margin-left: 93px;
+    @include area($height: none, $width: 450px);
   }
 
   &__form__container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width:1200px) {
+      flex-direction: row;
+      align-items: start;
+    }
   }
 
   &__form__title {
@@ -138,18 +211,28 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
+    margin-top: 60px;
+    @media screen and (min-width:1200px) {
+      text-align: start;
+      margin-top: 0;
+    }
   }
 
   &__form__input {
-    @include area($height: 50px, $width: 358px);
+    @include area($height: 50px, $width: 450px);
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(33, 150, 243, 0);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    margin-right: 12px;
     padding-left: 16px;
     color: $for-true-white-parts;
+    margin-bottom: 20px;
+    @media screen and (min-width:1200px) {
+      @include area($height: 50px, $width: 358px);
+      margin-right: 12px;
+    }
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.6);

@@ -486,6 +486,20 @@ button {
   background-color: #2f303a;
   animation-name: enter-from-down;
   animation-duration: 1s;
+  height: none;
+  width: 480px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .basement {
+    height: none;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .basement {
+    height: none;
+    width: 1200px;
+  }
 }
 .basement__logo {
   margin-bottom: 20px;
@@ -494,6 +508,12 @@ button {
   -webkit-background-clip: text;
   background-size: 144px 31.2px;
   -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__logo {
+    text-align: start;
+  }
 }
 .basement__logobluepart {
   color: #2196f3;
@@ -517,13 +537,23 @@ button {
   letter-spacing: 0.03em;
   font-style: normal;
   width: 231px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__adress {
+    text-align: start;
+  }
 }
 .basement__container {
-  flex-direction: row;
-  justify-content: start;
-  align-content: normal;
+  flex-direction: column;
+  align-items: center;
   row-gap: 20px;
   display: flex;
+}
+@media screen and (min-width: 1200px) {
+  .basement__container {
+    flex-direction: row;
+  }
 }
 .basement__tele, .basement__mail {
   color: rgba(255, 255, 255, 0.6);
@@ -533,6 +563,31 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: color, none, none;
+}
+@media screen and (min-width: 1200px) {
+  .basement__tele, .basement__mail {
+    text-align: start;
+  }
+}
+.basement__text__container {
+  width: 237px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .basement__information {
+    width: 603px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .basement__information {
+    flex-direction: row;
+    display: flex;
+    width: 507px;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    margin-right: 93px;
+  }
 }
 .basement__tele:hover {
   color: #2196f3;
@@ -546,13 +601,30 @@ button {
   flex-direction: column;
   row-gap: 9px;
 }
+.basement__item {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__item {
+    justify-content: start;
+  }
+}
 .basement__icons {
-  margin-left: 70px;
+  width: 237px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 .basement__icon__list {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  padding: 0px 16px;
 }
 .basement__icon__title {
   color: #ffffff;
@@ -564,6 +636,14 @@ button {
   line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__icon__title {
+    text-align: start;
+    margin-top: 0;
+  }
 }
 .basement__icon {
   height: 20px;
@@ -586,12 +666,19 @@ button {
   background-color: #2196f3;
 }
 .basement__form {
-  margin-left: 93px;
   height: none;
-  width: 570px;
+  width: 450px;
 }
 .basement__form__container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__form__container {
+    flex-direction: row;
+    align-items: start;
+  }
 }
 .basement__form__title {
   color: #ffffff;
@@ -603,18 +690,33 @@ button {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__form__title {
+    text-align: start;
+    margin-top: 0;
+  }
 }
 .basement__form__input {
   height: 50px;
-  width: 358px;
+  width: 450px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(33, 150, 243, 0);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin-right: 12px;
   padding-left: 16px;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__form__input {
+    height: 50px;
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 .basement__form__input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -962,6 +1064,20 @@ button {
   padding-bottom: 94px;
   background-color: #f5f4fa;
   overflow: hidden;
+  height: none;
+  width: 480px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ourteam {
+    height: none;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ourteam {
+    height: none;
+    width: 1200px;
+  }
 }
 .ourteam__container {
   justify-content: center;
@@ -1098,6 +1214,20 @@ button {
 .regcustomers {
   padding: 60px 0px;
   overflow: hidden;
+  height: none;
+  width: 480px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .regcustomers {
+    height: none;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regcustomers {
+    height: none;
+    width: 1200px;
+  }
 }
 .regcustomers__container {
   display: flex;
@@ -1117,6 +1247,11 @@ button {
   animation-name: enter-from-up;
   animation-duration: 1s;
 }
+@media screen and (min-width: 1200px) {
+  .regcustomers__title {
+    font-size: 36px;
+  }
+}
 .regcustomers__icons {
   display: flex;
   -moz-column-gap: 30px;
@@ -1127,6 +1262,18 @@ button {
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .regcustomers__icons {
+    height: 214px;
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regcustomers__icons {
+    height: 92px;
+    width: 1170px;
+  }
 }
 .regcustomers__icon__link {
   height: 92px;
@@ -1177,8 +1324,8 @@ button {
 }
 
 .modal {
-  height: 581px;
-  width: 528px;
+  height: 609px;
+  width: 450px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1187,6 +1334,12 @@ button {
   background-color: #ffffff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706), 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
   padding: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    height: 581px;
+    width: 528px;
+  }
 }
 .modal__title {
   font-family: Roboto;
@@ -1241,8 +1394,14 @@ button {
 }
 .modal__item:last-child .modal__input {
   height: 120px;
-  width: 448px;
+  width: 370px;
   padding: 12px 16px 94px 16px;
+}
+@media screen and (min-width: 1200px) {
+  .modal__item:last-child .modal__input {
+    height: 120px;
+    width: 448px;
+  }
 }
 .modal__text {
   color: #757575;
@@ -1257,11 +1416,17 @@ button {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   height: 40px;
-  width: 448px;
+  width: 370px;
   padding-left: 42px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: border-color, none, none;
+}
+@media screen and (min-width: 1200px) {
+  .modal__input {
+    height: 40px;
+    width: 448px;
+  }
 }
 .modal__input:focus {
   border-color: #2196f3;
@@ -1286,25 +1451,40 @@ button {
   align-items: center;
 }
 .modal__conditions__text {
-  margin-left: 7px;
-  margin-right: 4px;
+  margin-left: 8px;
+  margin-right: 3px;
   color: #757575;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 171.429% */
-  letter-spacing: 0.42px;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  width: 230px;
+}
+@media screen and (min-width: 1200px) {
+  .modal__conditions__text {
+    height: none;
+    width: 266px;
+    font-size: 14px;
+    margin-right: 4px;
+  }
 }
 .modal__conditions__link {
   color: #2196f3;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.42px;
   text-decoration-line: underline;
+}
+@media screen and (min-width: 1200px) {
+  .modal__conditions__link {
+    font-size: 14px;
+    padding-right: 17px;
+  }
 }
 .modal__conditions__checkbox {
   height: 15px;

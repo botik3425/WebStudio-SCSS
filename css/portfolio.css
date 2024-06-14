@@ -487,7 +487,19 @@ button {
 .lop__products {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  row-gap: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .lop__products {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lop__products {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
 }
 .lop__tag {
   color: #757575;
@@ -508,10 +520,20 @@ button {
 .lop__product {
   background-color: #ffffff;
   border: 1px solid #eeeeee;
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 0px) / 1);
   height: 404px;
   width: 370px;
   padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .lop__product {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lop__product {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .lop__product:first-child {
   animation-name: enter-from-upleft;
@@ -578,6 +600,9 @@ button {
 .lop__rad__container {
   display: block;
 }
+.lop__image {
+  height: 294px;
+}
 
 .overlay {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -610,6 +635,20 @@ button {
   background-color: #2f303a;
   animation-name: enter-from-down;
   animation-duration: 1s;
+  height: none;
+  width: 480px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .basement {
+    height: none;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .basement {
+    height: none;
+    width: 1200px;
+  }
 }
 .basement__logo {
   margin-bottom: 20px;
@@ -618,6 +657,12 @@ button {
   -webkit-background-clip: text;
   background-size: 144px 31.2px;
   -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__logo {
+    text-align: start;
+  }
 }
 .basement__logobluepart {
   color: #2196f3;
@@ -641,13 +686,23 @@ button {
   letter-spacing: 0.03em;
   font-style: normal;
   width: 231px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__adress {
+    text-align: start;
+  }
 }
 .basement__container {
-  flex-direction: row;
-  justify-content: start;
-  align-content: normal;
+  flex-direction: column;
+  align-items: center;
   row-gap: 20px;
   display: flex;
+}
+@media screen and (min-width: 1200px) {
+  .basement__container {
+    flex-direction: row;
+  }
 }
 .basement__tele, .basement__mail {
   color: rgba(255, 255, 255, 0.6);
@@ -657,6 +712,31 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: color, none, none;
+}
+@media screen and (min-width: 1200px) {
+  .basement__tele, .basement__mail {
+    text-align: start;
+  }
+}
+.basement__text__container {
+  width: 237px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .basement__information {
+    width: 603px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .basement__information {
+    flex-direction: row;
+    display: flex;
+    width: 507px;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    margin-right: 93px;
+  }
 }
 .basement__tele:hover {
   color: #2196f3;
@@ -670,13 +750,30 @@ button {
   flex-direction: column;
   row-gap: 9px;
 }
+.basement__item {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__item {
+    justify-content: start;
+  }
+}
 .basement__icons {
-  margin-left: 70px;
+  width: 237px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 .basement__icon__list {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  padding: 0px 16px;
 }
 .basement__icon__title {
   color: #ffffff;
@@ -688,6 +785,14 @@ button {
   line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__icon__title {
+    text-align: start;
+    margin-top: 0;
+  }
 }
 .basement__icon {
   height: 20px;
@@ -710,12 +815,19 @@ button {
   background-color: #2196f3;
 }
 .basement__form {
-  margin-left: 93px;
   height: none;
-  width: 570px;
+  width: 450px;
 }
 .basement__form__container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .basement__form__container {
+    flex-direction: row;
+    align-items: start;
+  }
 }
 .basement__form__title {
   color: #ffffff;
@@ -727,18 +839,33 @@ button {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__form__title {
+    text-align: start;
+    margin-top: 0;
+  }
 }
 .basement__form__input {
   height: 50px;
-  width: 358px;
+  width: 450px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(33, 150, 243, 0);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin-right: 12px;
   padding-left: 16px;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__form__input {
+    height: 50px;
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 .basement__form__input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -803,6 +930,41 @@ button {
   padding-bottom: 50px;
   padding-top: 80.5px;
   overflow: hidden;
+  height: none;
+  width: 480px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .heroport {
+    height: none;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heroport {
+    height: none;
+    width: 1200px;
+  }
+}
+.heroport__container {
+  height: 91px;
+  width: 326px;
+  margin-left: 15px;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .heroport__container {
+    height: 54px;
+    width: 575px;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heroport__container {
+    margin-left: auto;
+    height: 54px;
+    width: 575px;
+    padding: 0 10px;
+  }
 }
 .heroport__blacktag {
   background-color: #f5f4fa;
@@ -828,9 +990,10 @@ button {
 }
 .heroport__items {
   display: flex;
-  justify-content: center;
   -moz-column-gap: 8px;
        column-gap: 8px;
+  flex-wrap: wrap;
+  row-gap: 15px;
 }
 .heroport__items:first-child, .heroport__items:nth-child(2) {
   animation-name: enter-from-left;

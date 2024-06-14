@@ -6,7 +6,13 @@
   &__products {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    row-gap: 30px;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      column-gap: 30px;
+    }
+    @media screen and (min-width:1200px) {
+      column-gap: 30px;
+    }
   }
   &__tag {
     color: $for-grey-parts;
@@ -29,9 +35,15 @@
   &__product {
     background-color: $for-true-white-parts;
     border: 1px solid $for-strange-white-parts;
-    flex-basis: calc((100% - 2 * 30px) / 3);
+    flex-basis: calc((100% - 0 * 0px) / 1);
     @include area($height: 404px, $width: 370px);
     padding-bottom: 20px;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      flex-basis: calc((100% - 1 * 30px) / 2);
+    }
+    @media screen and (min-width:1200px) {
+      flex-basis: calc((100% - 2 * 30px) / 3);
+    }
 
     &:first-child {
       @include animation($name: enter-from-upleft);
@@ -106,6 +118,10 @@
 
   &__rad__container {
     display: block;
+  }
+
+  &__image{
+    height: 294px;
   }
 }
 
