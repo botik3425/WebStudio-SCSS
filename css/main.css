@@ -1008,7 +1008,7 @@ button {
   height: 120px;
   width: 100%;
   background-color: #f5f4fa;
-  padding: 20.83% 0px;
+  padding: 25px 0px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .pluses__image-container {
@@ -1109,10 +1109,10 @@ button {
   padding-bottom: 94px;
   background-color: #f5f4fa;
   overflow: hidden;
+  padding-top: 94px;
 }
 .ourteam__container {
   justify-content: center;
-  padding-top: 94px;
 }
 .ourteam__slog {
   color: #212121;
@@ -1120,18 +1120,20 @@ button {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   animation-name: enter-from-up;
   animation-duration: 1s;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .ourteam__slog {
     font-size: 28px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .ourteam__slog {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 .ourteam__icons {
@@ -1271,13 +1273,11 @@ button {
 }
 .regcustomers__icons {
   display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-  flex-direction: column;
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   gap: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1293,13 +1293,23 @@ button {
 }
 .regcustomers__icon__link {
   height: 92px;
-  width: 170px;
+  width: 37.8%;
   border: #afb1b8 1px solid;
   border-radius: 4px;
   cursor: pointer;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: border, none, none;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .regcustomers__icon__link {
+    width: 170px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regcustomers__icon__link {
+    width: 170px;
+  }
 }
 .regcustomers__icon__link:first-child, .regcustomers__icon__link:nth-child(2), .regcustomers__icon__link:nth-child(3) {
   animation-name: enter-from-left;
@@ -1317,7 +1327,7 @@ button {
 }
 .regcustomers__icon {
   height: 92px;
-  width: 170px;
+  width: 100%;
   fill: #afb1b8;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;

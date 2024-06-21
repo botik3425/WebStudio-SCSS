@@ -3,10 +3,10 @@
   padding-bottom: 94px;
   background-color: $for-white-parts;
   overflow: hidden;
+  padding-top: 94px;
 
   &__container {
     justify-content: center;
-    padding-top: 94px;
   }
 
   &__slog {
@@ -15,15 +15,17 @@
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @include animation($name: enter-from-up);
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       font-size: 28px;
+      margin-bottom: 30px;
     }
 
     @media screen and (min-width: 1200px) {
       font-size: 36px;
+      margin-bottom: 50px;
     }
   }
 

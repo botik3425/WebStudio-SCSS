@@ -28,12 +28,11 @@
 
   &__icons {
     display: flex;
-    column-gap: 30px;
-    flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     gap: 30px;
     @media screen and (min-width:768px) and (max-width:1199px) {
       flex-direction: row;
@@ -45,11 +44,17 @@
   }
 
   &__icon__link {
-    @include area($width: 170px, $height: 92px);
+    @include area($width: 37.8%, $height: 92px);
     border: $for-strange-grey-parts 1px solid;
     border-radius: 4px;
     cursor: pointer;
     @include transition($property: border, $property2: none, $property3: none);
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      width: 170px;
+    }
+    @media screen and (min-width:1200px) {
+      width: 170px;
+    }
 
     &:first-child,
     &:nth-child(2),
@@ -75,7 +80,7 @@
   }
 
   &__icon {
-    @include area($height: 92px, $width: 170px);
+    @include area($height: 92px, $width: 100%);
     fill: $for-strange-grey-parts;
     @include transition($property: fill, $property2: none, $property3: none);
   }
