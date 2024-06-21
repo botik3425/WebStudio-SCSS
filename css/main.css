@@ -88,8 +88,8 @@
 }
 .scroll__button {
   border-radius: 100px;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -97,25 +97,75 @@
   transition-duration: 250ms;
   transition-property: width, height, none;
   background-color: #757575;
-  padding: 15px 15px;
+  padding: 7.5px 7.5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button {
+    padding: 10px 10px;
+    height: 45px;
+    width: 45px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button {
+    padding: 15px 15px;
+    height: 55px;
+    width: 55px;
+  }
+}
 .scroll__button:hover {
-  height: 110px;
-  width: 110px;
+  height: 50px;
+  width: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button:hover {
+    height: 55px;
+    width: 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button:hover {
+    height: 65px;
+    width: 65px;
+  }
 }
 .scroll__button:hover .scroll__button__icon {
-  height: 80px;
-  width: 80px;
+  height: 35px;
+  width: 35px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button:hover .scroll__button__icon {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button:hover .scroll__button__icon {
+    height: 50px;
+    width: 50px;
+  }
 }
 .scroll__button__icon {
-  height: 70px;
-  width: 70px;
+  height: 25px;
+  width: 25px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: width, height, none;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button__icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button__icon {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 ul,
@@ -226,30 +276,36 @@ button {
   border: #eeeeee 1px solid;
   position: fixed;
   background-color: #ffffff;
-  height: 60px;
-  width: 100%;
   z-index: 2;
   animation-name: enter-from-up;
   animation-duration: 1s;
+  width: 100%;
 }
 @media screen and (min-width: 763px) and (max-width: 1199px) {
   .head {
     padding: 26px 0px;
-    height: 80px;
-    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .head {
     padding-top: 24px;
     padding-bottom: 25px;
-    height: 80px;
-    width: 100%;
   }
 }
 .head__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 763px) {
+  .head__container {
+    justify-content: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__container {
+    justify-content: auto;
+  }
 }
 .head__logobluepart {
   color: #2196f3;
@@ -274,29 +330,35 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 144px 31.2px;
-  margin-right: 93px;
 }
-.head__menu {
+@media screen and (min-width: 763px) {
+  .head__logo {
+    margin-right: 93px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__logo {
+    margin-right: 93px;
+  }
+}
+.head__button {
   height: 40px;
   width: 40px;
-  margin-left: 183px;
-  fill: black;
   opacity: 1;
+  display: block;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .head__menu {
+  .head__button {
     opacity: 0;
     position: absolute;
   }
 }
 @media screen and (min-width: 1200px) {
-  .head__menu {
+  .head__button {
     opacity: 0;
     position: absolute;
   }
-}
-.head__menu__icon {
-  width: 40px;
 }
 .head__logoblackpart {
   color: #212121;
@@ -451,11 +513,18 @@ button {
        column-gap: 50px;
   display: flex;
   align-items: center;
+  position: absolute;
 }
 @media screen and (min-width: 768px) {
   .head__list, .head__list2 {
     height: 26px;
     width: none;
+    position: static;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__list, .head__list2 {
+    position: static;
   }
 }
 .head__list2 {
@@ -486,20 +555,6 @@ button {
   background-color: #2f303a;
   animation-name: enter-from-down;
   animation-duration: 1s;
-  height: none;
-  width: 480px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .basement {
-    height: none;
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .basement {
-    height: none;
-    width: 1200px;
-  }
 }
 .basement__logo {
   margin-bottom: 20px;
@@ -616,7 +671,7 @@ button {
 @media screen and (min-width: 1200px) {
   .basement__icons {
     display: flex;
-    justify-content: center;
+    padding: 12px 0px 36px 0px;
     flex-direction: column;
   }
 }
@@ -624,7 +679,8 @@ button {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  padding: 0px 16px;
+  padding-right: 16px;
+  padding-left: 0px;
 }
 .basement__icon__title {
   color: #ffffff;
@@ -667,12 +723,13 @@ button {
 }
 .basement__form {
   height: none;
-  width: 450px;
+  width: 100%;
 }
 .basement__form__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .basement__form__container {
@@ -700,8 +757,8 @@ button {
   }
 }
 .basement__form__input {
+  width: 100%;
   height: 50px;
-  width: 450px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -711,9 +768,13 @@ button {
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .basement__form__input {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .basement__form__input {
-    height: 50px;
     width: 358px;
     margin-right: 12px;
   }
@@ -776,30 +837,19 @@ button {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../photos/heroindex-img.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 400px;
-  width: 480px;
-  background-size: 480px 400px;
   padding-top: 118px;
   padding-bottom: 118px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .heroindex {
-    height: 400px;
-    width: 768px;
     padding-top: 118px;
     padding-bottom: 118px;
-    background-size: 768px 400px;
   }
 }
 @media screen and (min-width: 1200px) {
   .heroindex {
-    height: 600px;
-    width: 1200px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-size: 1200px 600px;
   }
 }
 .heroindex__whiteslog {
@@ -887,19 +937,9 @@ button {
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden;
-  height: 1114px;
-  width: 480px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .pluses {
-    height: 600px;
-    width: 768px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .pluses {
-    height: 436px;
-    width: 1200px;
     padding: 94px 0px;
   }
 }
@@ -964,25 +1004,30 @@ button {
          column-gap: 30px;
   }
 }
-.pluses__icon {
+.pluses__image-container {
   height: 120px;
-  width: 450px;
-  padding: 25px 190px;
+  width: 100%;
   background-color: #f5f4fa;
+  padding: 20.83% 0px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .pluses__icon {
+  .pluses__image-container {
     height: 120px;
     width: 354px;
-    padding: 25px 142px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .pluses__icon {
+  .pluses__image-container {
     height: 120px;
     width: 270px;
-    padding: 25px 100px;
   }
+}
+.pluses__icon {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  height: 70px;
+  display: block;
 }
 .pluses__item:first-child, .pluses__item:nth-child(2) {
   animation-name: enter-from-left;
@@ -1064,20 +1109,6 @@ button {
   padding-bottom: 94px;
   background-color: #f5f4fa;
   overflow: hidden;
-  height: none;
-  width: 480px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .ourteam {
-    height: none;
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ourteam {
-    height: none;
-    width: 1200px;
-  }
 }
 .ourteam__container {
   justify-content: center;
@@ -1214,20 +1245,6 @@ button {
 .regcustomers {
   padding: 60px 0px;
   overflow: hidden;
-  height: none;
-  width: 480px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .regcustomers {
-    height: none;
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .regcustomers {
-    height: none;
-    width: 1200px;
-  }
 }
 .regcustomers__container {
   display: flex;
@@ -1257,27 +1274,26 @@ button {
   -moz-column-gap: 30px;
        column-gap: 30px;
   flex-direction: column;
-  height: 336px;
-  width: 450px;
+  width: 100%;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .regcustomers__icons {
-    height: 214px;
-    width: 738px;
+    flex-direction: row;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .regcustomers__icons {
-    height: 92px;
-    width: 1170px;
+    flex-direction: row;
   }
 }
 .regcustomers__icon__link {
   height: 92px;
-  width: 210px;
+  width: 170px;
   border: #afb1b8 1px solid;
   border-radius: 4px;
   cursor: pointer;
@@ -1301,7 +1317,7 @@ button {
 }
 .regcustomers__icon {
   height: 92px;
-  width: 210px;
+  width: 170px;
   fill: #afb1b8;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
@@ -1523,7 +1539,7 @@ button {
   top: 0;
   bottom: 0;
   height: none;
-  width: 50px;
+  width: 20px;
   background-color: #757575;
   display: flex;
   justify-content: center;
@@ -1531,9 +1547,30 @@ button {
   animation-name: enter-from-left;
   animation-duration: 1s;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backmenu__closed {
+    width: 35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .backmenu__closed {
+    width: 50px;
+  }
+}
 .backmenu__closed__title {
   writing-mode: vertical-lr;
   color: #ffffff;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backmenu__closed__title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .backmenu__closed__title {
+    font-size: 22px;
+  }
 }
 
 .backmenu__opened {

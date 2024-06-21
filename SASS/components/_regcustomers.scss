@@ -3,15 +3,6 @@
 .regcustomers {
   padding: 60px 0px;
   overflow: hidden;
-  @include area ($width: 480px, $height: none);
-
-  @media screen and (min-width: 768px) and (max-width:1199px) {
-    @include area ($width: 768px, $height: none);
-  }
-
-  @media screen and (min-width:1200px) {
-    @include area ($width: 1200px, $height: none);
-  }
 
   &__container {
     display: flex;
@@ -39,20 +30,22 @@
     display: flex;
     column-gap: 30px;
     flex-direction: column;
-    @include area($width: 450px, $height: 336px);
+    width: 100%;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 30px;
     @media screen and (min-width:768px) and (max-width:1199px) {
-      @include area($width: 738px, $height: 214px);
+      flex-direction: row;
+      width: 100%;
     }
     @media screen and (min-width:1200px) {
-      @include area($width: 1170px, $height: 92px);
+      flex-direction: row;
     }
   }
 
   &__icon__link {
-    @include area($width: 210px, $height: 92px);
+    @include area($width: 170px, $height: 92px);
     border: $for-strange-grey-parts 1px solid;
     border-radius: 4px;
     cursor: pointer;
@@ -82,7 +75,7 @@
   }
 
   &__icon {
-    @include area($height: 92px, $width: 210px);
+    @include area($height: 92px, $width: 170px);
     fill: $for-strange-grey-parts;
     @include transition($property: fill, $property2: none, $property3: none);
   }

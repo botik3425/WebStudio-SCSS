@@ -88,8 +88,8 @@
 }
 .scroll__button {
   border-radius: 100px;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -97,25 +97,75 @@
   transition-duration: 250ms;
   transition-property: width, height, none;
   background-color: #757575;
-  padding: 15px 15px;
+  padding: 7.5px 7.5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button {
+    padding: 10px 10px;
+    height: 45px;
+    width: 45px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button {
+    padding: 15px 15px;
+    height: 55px;
+    width: 55px;
+  }
+}
 .scroll__button:hover {
-  height: 110px;
-  width: 110px;
+  height: 50px;
+  width: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button:hover {
+    height: 55px;
+    width: 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button:hover {
+    height: 65px;
+    width: 65px;
+  }
 }
 .scroll__button:hover .scroll__button__icon {
-  height: 80px;
-  width: 80px;
+  height: 35px;
+  width: 35px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button:hover .scroll__button__icon {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button:hover .scroll__button__icon {
+    height: 50px;
+    width: 50px;
+  }
 }
 .scroll__button__icon {
-  height: 70px;
-  width: 70px;
+  height: 25px;
+  width: 25px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: width, height, none;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scroll__button__icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll__button__icon {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 ul,
@@ -226,30 +276,36 @@ button {
   border: #eeeeee 1px solid;
   position: fixed;
   background-color: #ffffff;
-  height: 60px;
-  width: 100%;
   z-index: 2;
   animation-name: enter-from-up;
   animation-duration: 1s;
+  width: 100%;
 }
 @media screen and (min-width: 763px) and (max-width: 1199px) {
   .head {
     padding: 26px 0px;
-    height: 80px;
-    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .head {
     padding-top: 24px;
     padding-bottom: 25px;
-    height: 80px;
-    width: 100%;
   }
 }
 .head__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 763px) {
+  .head__container {
+    justify-content: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__container {
+    justify-content: auto;
+  }
 }
 .head__logobluepart {
   color: #2196f3;
@@ -274,29 +330,35 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 144px 31.2px;
-  margin-right: 93px;
 }
-.head__menu {
+@media screen and (min-width: 763px) {
+  .head__logo {
+    margin-right: 93px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__logo {
+    margin-right: 93px;
+  }
+}
+.head__button {
   height: 40px;
   width: 40px;
-  margin-left: 183px;
-  fill: black;
   opacity: 1;
+  display: block;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .head__menu {
+  .head__button {
     opacity: 0;
     position: absolute;
   }
 }
 @media screen and (min-width: 1200px) {
-  .head__menu {
+  .head__button {
     opacity: 0;
     position: absolute;
   }
-}
-.head__menu__icon {
-  width: 40px;
 }
 .head__logoblackpart {
   color: #212121;
@@ -451,11 +513,18 @@ button {
        column-gap: 50px;
   display: flex;
   align-items: center;
+  position: absolute;
 }
 @media screen and (min-width: 768px) {
   .head__list, .head__list2 {
     height: 26px;
     width: none;
+    position: static;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .head__list, .head__list2 {
+    position: static;
   }
 }
 .head__list2 {
@@ -635,20 +704,6 @@ button {
   background-color: #2f303a;
   animation-name: enter-from-down;
   animation-duration: 1s;
-  height: none;
-  width: 480px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .basement {
-    height: none;
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .basement {
-    height: none;
-    width: 1200px;
-  }
 }
 .basement__logo {
   margin-bottom: 20px;
@@ -765,7 +820,7 @@ button {
 @media screen and (min-width: 1200px) {
   .basement__icons {
     display: flex;
-    justify-content: center;
+    padding: 12px 0px 36px 0px;
     flex-direction: column;
   }
 }
@@ -773,7 +828,8 @@ button {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  padding: 0px 16px;
+  padding-right: 16px;
+  padding-left: 0px;
 }
 .basement__icon__title {
   color: #ffffff;
@@ -816,12 +872,13 @@ button {
 }
 .basement__form {
   height: none;
-  width: 450px;
+  width: 100%;
 }
 .basement__form__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .basement__form__container {
@@ -849,8 +906,8 @@ button {
   }
 }
 .basement__form__input {
+  width: 100%;
   height: 50px;
-  width: 450px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -860,9 +917,13 @@ button {
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .basement__form__input {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .basement__form__input {
-    height: 50px;
     width: 358px;
     margin-right: 12px;
   }
@@ -930,39 +991,9 @@ button {
   padding-bottom: 50px;
   padding-top: 80.5px;
   overflow: hidden;
-  height: none;
-  width: 480px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .heroport {
-    height: none;
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .heroport {
-    height: none;
-    width: 1200px;
-  }
-}
-.heroport__container {
-  height: 91px;
-  width: 326px;
-  margin-left: 15px;
-  margin-right: auto;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .heroport__container {
-    height: 54px;
-    width: 575px;
-    margin-left: auto;
-  }
 }
 @media screen and (min-width: 1200px) {
   .heroport__container {
-    margin-left: auto;
-    height: 54px;
-    width: 575px;
     padding: 0 10px;
   }
 }
@@ -994,6 +1025,17 @@ button {
        column-gap: 8px;
   flex-wrap: wrap;
   row-gap: 15px;
+  justify-content: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .heroport__items {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heroport__items {
+    justify-content: center;
+  }
 }
 .heroport__items:first-child, .heroport__items:nth-child(2) {
   animation-name: enter-from-left;
@@ -1013,7 +1055,7 @@ button {
   top: 0;
   bottom: 0;
   height: none;
-  width: 50px;
+  width: 20px;
   background-color: #757575;
   display: flex;
   justify-content: center;
@@ -1021,9 +1063,30 @@ button {
   animation-name: enter-from-left;
   animation-duration: 1s;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backmenu__closed {
+    width: 35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .backmenu__closed {
+    width: 50px;
+  }
+}
 .backmenu__closed__title {
   writing-mode: vertical-lr;
   color: #ffffff;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backmenu__closed__title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .backmenu__closed__title {
+    font-size: 22px;
+  }
 }
 
 .backmenu__opened {

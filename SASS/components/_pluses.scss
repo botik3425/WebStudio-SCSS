@@ -3,14 +3,8 @@
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden;
-  @include area($width: 480px, $height: 1114px);
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    @include area($width: 768px, $height: 600px);
-  }
 
   @media screen and (min-width: 1200px) {
-    @include area($width: 1200px, $height: 436px);
     padding: 94px 0px;
   }
 
@@ -61,19 +55,26 @@
       column-gap: 30px;
     }
   }
-  &__icon {
-    @include area($height: 120px, $width: 450px);
-    padding: 25px 190px;
+
+  &__image-container{
+    @include area($height: 120px, $width: 100%);
     background-color: $for-white-parts;
+    padding: 20.83% 0px;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       @include area($width: 354px, $height: 120px);
-      padding: 25px 142px;
     }
     @media screen and (min-width: 1200px) {
       @include area($width: 270px, $height: 120px);
-      padding: 25px 100px;
     }
+  }
+
+  &__icon {
+    margin-left: auto;
+    margin-right: auto;
+width: 70px;
+height: 70px;
+display: block;
   }
 
   &__item {
