@@ -40,6 +40,7 @@
   align-items: center;
   padding-left: 10px;
   @include transition($property: width, $property2: none, $property3: none);
+
   &__icon {
     fill: $for-orange-parts;
     width: 20px;

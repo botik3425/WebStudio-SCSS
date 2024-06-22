@@ -1,21 +1,13 @@
-.lop__container,
-.head__container,
-.wwd__container,
-.ourteam__container,
-.hero__container,
-.heroport__container,
-.pluses__container,
-.basement__container,
-.regcustomers__container {
+.container {
   outline: solid red 2px;
   margin: 0 auto;
-  max-width: 450px;
+  max-width: 480px;
+  padding: 0px 15px;
   @media screen and (min-width: 768px) {
-    max-width: 738px;
+    max-width: 768px;
   }
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
-    padding: 0 15px;
   }
 }
 
@@ -26,5 +18,11 @@
 }
 
 .center {
-  padding-top: 80.5px;
+  padding-top: 73.6px;
+  @media screen and (min-width: 768px) {
+    padding-top: 80px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 80.5px;
+  }
 }

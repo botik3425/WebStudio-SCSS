@@ -8,7 +8,7 @@
   width: 100%;
 
   @media screen and (min-width: 763px) and (max-width: 1199px) {
-    padding: 26px 0px;
+    padding: 21px 0px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -52,12 +52,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 144px 31.2px;
-    @media screen and (min-width: 763px) {
-      margin-right: 93px;
-    }
-    @media screen and (min-width: 1200px) {
-      margin-right: 93px;
-    }
   }
 
   &__button {
@@ -134,7 +128,7 @@
         opacity: 1;
         pointer-events: all;
         visibility: visible;
-        top: 38px;
+        top: 44px;
       }
       @media screen and (min-width: 1200px) {
         opacity: 1;
@@ -223,29 +217,28 @@
 
   &__list,
   &__list2 {
-    column-gap: 50px;
-    display: flex;
-    align-items: center;
-    position: absolute;
+    display: none;
     @media screen and (min-width: 768px) {
       @include area($width: none, $height: 26px);
-      position: static;;
+      display: flex;
+      column-gap: 50px;
+    align-items: center;
     }
     @media screen and (min-width: 1200px) {
-      position: static;
+      display: flex;
+      column-gap: 50px;
+    align-items: center;
     }
   }
   &__list2 {
     @include area($width: none, $height: 1px);
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       @include area($width: 138px, $height: 38px);
-      margin-left: 96px;
       row-gap: 10px;
       flex-direction: column;
       align-items: flex-start;
     }
     @media screen and (min-width: 1200px) {
-      margin-left: 315px;
       row-gap: 10px;
     }
   }

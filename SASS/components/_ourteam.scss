@@ -1,9 +1,16 @@
 /*index Our team */
 .ourteam {
-  padding-bottom: 94px;
   background-color: $for-white-parts;
   overflow: hidden;
-  padding-top: 94px;
+  padding: 60px 0px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+   padding: 60px 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
 
   &__container {
     justify-content: center;
@@ -101,14 +108,14 @@
     padding-bottom: 30px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    @include area($width: 450px, $height: 622px);
+    @include area($width: 450px, $height: auto);
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      @include area($width: 354px, $height: 536px);
+      @include area($width: 354px, $height: auto);
     }
 
     @media screen and (min-width: 1200px) {
-      @include area($width: 270px, $height: 428px);
+      @include area($width: 270px, $height: auto);
     }
 
     &:first-child,
@@ -122,15 +129,7 @@
     }
   }
 
-  &__photo {
-    @include area($height: 460px, $width: 450px);
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      @include area($width: 354px, $height: 374px);
-    }
-
-    @media screen and (min-width: 1200px) {
-      @include area($width: 270px, $height: 260px);
-    }
-  }
+  // &__photo {
+   
+  // }
 }

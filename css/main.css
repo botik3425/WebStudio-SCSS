@@ -220,44 +220,20 @@ button {
   outline: none;
 }
 
-.lop__container,
-.head__container,
-.wwd__container,
-.ourteam__container,
-.hero__container,
-.heroport__container,
-.pluses__container,
-.basement__container,
-.regcustomers__container {
+.container {
   outline: solid red 2px;
   margin: 0 auto;
-  max-width: 450px;
+  max-width: 480px;
+  padding: 0px 15px;
 }
 @media screen and (min-width: 768px) {
-  .lop__container,
-  .head__container,
-  .wwd__container,
-  .ourteam__container,
-  .hero__container,
-  .heroport__container,
-  .pluses__container,
-  .basement__container,
-  .regcustomers__container {
-    max-width: 738px;
+  .container {
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .lop__container,
-  .head__container,
-  .wwd__container,
-  .ourteam__container,
-  .hero__container,
-  .heroport__container,
-  .pluses__container,
-  .basement__container,
-  .regcustomers__container {
+  .container {
     max-width: 1200px;
-    padding: 0 15px;
   }
 }
 
@@ -268,7 +244,17 @@ button {
 }
 
 .center {
-  padding-top: 80.5px;
+  padding-top: 73.6px;
+}
+@media screen and (min-width: 768px) {
+  .center {
+    padding-top: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .center {
+    padding-top: 80.5px;
+  }
 }
 
 .head {
@@ -283,7 +269,7 @@ button {
 }
 @media screen and (min-width: 763px) and (max-width: 1199px) {
   .head {
-    padding: 26px 0px;
+    padding: 21px 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -330,16 +316,6 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 144px 31.2px;
-}
-@media screen and (min-width: 763px) {
-  .head__logo {
-    margin-right: 93px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .head__logo {
-    margin-right: 93px;
-  }
 }
 .head__button {
   height: 40px;
@@ -425,7 +401,7 @@ button {
     opacity: 1;
     pointer-events: all;
     visibility: visible;
-    top: 38px;
+    top: 44px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -509,22 +485,24 @@ button {
   cursor: pointer;
 }
 .head__list, .head__list2 {
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  display: flex;
-  align-items: center;
-  position: absolute;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .head__list, .head__list2 {
     height: 26px;
     width: none;
-    position: static;
+    display: flex;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1200px) {
   .head__list, .head__list2 {
-    position: static;
+    display: flex;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    align-items: center;
   }
 }
 .head__list2 {
@@ -535,7 +513,6 @@ button {
   .head__list2 {
     height: 38px;
     width: 138px;
-    margin-left: 96px;
     row-gap: 10px;
     flex-direction: column;
     align-items: flex-start;
@@ -543,7 +520,6 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .head__list2 {
-    margin-left: 315px;
     row-gap: 10px;
   }
 }
@@ -654,7 +630,12 @@ button {
   margin-bottom: 0px;
   display: flex;
   flex-direction: column;
-  row-gap: 9px;
+  row-gap: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__list {
+    row-gap: 9px;
+  }
 }
 .basement__item {
   display: flex;
@@ -667,6 +648,7 @@ button {
 }
 .basement__icons {
   width: 237px;
+  padding-top: 60px;
 }
 @media screen and (min-width: 1200px) {
   .basement__icons {
@@ -675,12 +657,16 @@ button {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .basement__icons {
+    padding-top: 5px;
+  }
+}
 .basement__icon__list {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  padding-right: 16px;
-  padding-left: 0px;
+  justify-content: center;
 }
 .basement__icon__title {
   color: #ffffff;
@@ -693,7 +679,6 @@ button {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 60px;
 }
 @media screen and (min-width: 1200px) {
   .basement__icon__title {
@@ -724,6 +709,12 @@ button {
 .basement__form {
   height: none;
   width: 100%;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .basement__form {
+    padding-top: 0px;
+  }
 }
 .basement__form__container {
   display: flex;
@@ -748,7 +739,6 @@ button {
   text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
-  margin-top: 60px;
 }
 @media screen and (min-width: 1200px) {
   .basement__form__title {
@@ -1106,10 +1096,19 @@ button {
 
 /*index Our team */
 .ourteam {
-  padding-bottom: 94px;
   background-color: #f5f4fa;
   overflow: hidden;
-  padding-top: 94px;
+  padding: 60px 0px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ourteam {
+    padding: 60px 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ourteam {
+    padding: 94px 0px;
+  }
 }
 .ourteam__container {
   justify-content: center;
@@ -1203,18 +1202,18 @@ button {
   border-radius: 4px;
   padding-bottom: 30px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  height: 622px;
+  height: auto;
   width: 450px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .ourteam__item {
-    height: 536px;
+    height: auto;
     width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .ourteam__item {
-    height: 428px;
+    height: auto;
     width: 270px;
   }
 }
@@ -1225,22 +1224,6 @@ button {
 .ourteam__item:last-child, .ourteam__item:nth-child(3) {
   animation-name: enter-from-right;
   animation-duration: 1s;
-}
-.ourteam__photo {
-  height: 460px;
-  width: 450px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .ourteam__photo {
-    height: 374px;
-    width: 354px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ourteam__photo {
-    height: 260px;
-    width: 270px;
-  }
 }
 
 /* Regular customers(regcustomers) */

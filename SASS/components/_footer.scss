@@ -125,18 +125,22 @@
   &__icons {
     // margin-left: 70px;
     width: 237px;
+    padding-top: 60px;
     @media screen and (min-width:1200px) {
       display: flex;
       padding: 12px 0px 36px 0px;
       flex-direction: column;
-    }
+  }
+  @media screen and (min-width:768px) and (max-width:1199px) {
+    padding-top: 5px;
+  }
+
   }
 
   &__icon__list {
     display: flex;
     column-gap: 10px;
-    padding-right: 16px;
-    padding-left: 0px;
+    justify-content: center;
   }
 
   &__icon__title {
@@ -150,7 +154,6 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 60px;
     @media screen and (min-width:1200px) {
       text-align: start;
       margin-top: 0;
@@ -184,6 +187,10 @@
   &__form {
     // margin-left: 93px;
     @include area($height: none, $width: 100%);
+    padding-top: 60px;
+    @media screen and (min-width:1200px) {
+      padding-top: 0px;
+    }
   }
 
   &__form__container {
@@ -208,7 +215,6 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     text-align: center;
-    margin-top: 60px;
     @media screen and (min-width:1200px) {
       text-align: start;
       margin-top: 0;
