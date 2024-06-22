@@ -144,5 +144,13 @@
     line-height: 28px; /* 155.556% */
     letter-spacing: 0.54px;
     position: absolute;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      left: 24px;
+    top: 49px;
+    }
+    @media screen and (min-width:1200px) {
+      left: 24px;
+    top: 77px;
+    }
   }
 }

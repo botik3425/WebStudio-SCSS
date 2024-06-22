@@ -51,9 +51,11 @@
     justify-content: auto;
     @media screen and (min-width:768px) and (max-width:1199px) {
       justify-content: center;
+      row-gap: 0px;
     }
     @media screen and (min-width:1200px) {
       justify-content: center;
+      row-gap: 0px;
     }
 
     &:first-child,

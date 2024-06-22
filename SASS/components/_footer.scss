@@ -108,7 +108,10 @@
     margin-bottom: 0px;
     display: flex;
     flex-direction: column;
-    row-gap: 9px;
+    row-gap: 8px;
+    @media screen and (min-width:1200px) {
+      row-gap: 9px;
+    }
   }
 
   &__item{
