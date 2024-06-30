@@ -25,7 +25,7 @@
             ><span class="head__logobluepart">Web</span
             ><span class="head__logoblackpart">Studio</span></a
           >
-          <button type="button" class="head__button"><img src="./photos/menu.webp" alt="mtnu" class="head__button__image"></button>
+          <button type="button" class="head__button js-open-menu"><img src="./photos/menu.webp" alt="menu" class="head__button__image"></button>
           <ul class="head__list">
             <li class="head__item">
               <a href="./index.html" class="head__page">Студія</a>
@@ -419,7 +419,7 @@
           <ul class="modal__list">
             <li class="modal__item">
               <label for="name" class="modal__text">Ім'я</label>
-              <div class="modal__input__container container">
+              <div class="modal__input__container">
                 <input
                   type="text"
                   name=""
@@ -434,7 +434,7 @@
             </li>
             <li class="modal__item">
               <label for="tel" class="modal__text">Телефон</label>
-              <div class="modal__input__container container">
+              <div class="modal__input__container">
                 <input
                   type="tel"
                   name=""
@@ -449,7 +449,7 @@
             </li>
             <li class="modal__item">
               <label for="email" class="modal__text">Пошта</label>
-              <div class="modal__input__container container">
+              <div class="modal__input__container">
                 <input
                   type="email"
                   name=""
@@ -534,6 +534,43 @@
         <use href="./photos/symbol-defs.svg#arrow-up"></use>
       </svg>
     </a>
+    <div class="mobile-menu js-menu-container is-hidden" id="mobile-menu">
+      <button type="submit" class="modal__close js-close-menu">
+        <svg class="modal__close__icon">
+          <use href="./photos/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="mobile-menu__page">Студія</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__page">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__page">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu__list2">
+        <li class="mobile-menu__item">
+          <a href="mailto:info@devstudio.com" class="mobile-menu__email"
+            ><svg class="mobile-menu__icon__mail">
+              <use href="./photos/symbol-defs.svg#icon-mail"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="tel:+380961111111" class="mobile-menu__tel">
+            <svg class="mobile-menu__icon__tel">
+              <use href="./photos/symbol-defs.svg#icon-tel"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

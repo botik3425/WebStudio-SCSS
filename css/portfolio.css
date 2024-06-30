@@ -643,9 +643,6 @@ button {
 .lop__rad__container {
   display: block;
 }
-.lop__image {
-  height: 294px;
-}
 
 .overlay {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1133,4 +1130,21 @@ button {
   gap: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.mobile-menu {
+  display: flex;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
 }/*# sourceMappingURL=portfolio.css.map */
