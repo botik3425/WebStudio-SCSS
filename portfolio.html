@@ -25,7 +25,7 @@
             ><span class="head__logobluepart">Web</span
             ><span class="head__logoblackpart">Studio</span></a
           >
-          <button type="button" class="head__button js-open-menu"><img src="./photos/menu.webp" alt="mtnu" class="head__button__image"></button>
+          <button type="button" class="head__button js-open-menu"><img src="./photos/menu.webp" alt="menu" class="head__button__image"></button>
           <ul class="head__list">
             <li class="head__item">
               <a href="./index.html" class="head__page">Студія</a>
@@ -311,6 +311,43 @@
         <use href="./photos/symbol-defs.svg#arrow-up"></use>
       </svg>
     </a>
+    <div class="mobile-menu js-menu-container is-hidden" id="mobile-menu">
+      <button type="submit" class="mobile-menu__close js-close-menu">
+        <svg class="mobile-menu__close__icon">
+          <use href="./photos/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="mobile-menu__page">Студія</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__page">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__page">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu__list2">
+        <li class="mobile-menu__item">
+          <a href="mailto:info@devstudio.com" class="mobile-menu__email">
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="tel:+380961111111" class="mobile-menu__tel">
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+      <ul class="mobile-menu__list3">
+          <li class="mobile-menu__link__container"><a href="https://www.instagram.com" class="mobile-menu__link">Instagram</a><div class="mobile-menu__line"></div></li>
+          <li class="mobile-menu__link__container"><a href="https://www.twitter.com" class="mobile-menu__link">Twitter</a><div class="mobile-menu__line"></div></li>
+          <li class="mobile-menu__link__container"><a href="https://www.facebook.com" class="mobile-menu__link">Facebook</a><div class="mobile-menu__line"></div></li>
+          <li class="mobile-menu__link__container"><a href="https://www.linkedin.com" class="mobile-menu__link">LinkedIn</a></li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

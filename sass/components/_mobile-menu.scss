@@ -17,6 +17,12 @@
     padding-left: 40px;
     padding-top: 48px;
 
+    @media screen and (min-width: 786px) {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 30px;
+    }
+
 
     &__close {
         @include area($height: 30px, $width: 30px);
@@ -49,6 +55,10 @@
 
       &__list{
         margin-bottom: 302px;
+
+        @media screen and (min-width: 786px) {
+            margin-bottom: 0px;
+        }
       }
 
     &__page{
@@ -86,6 +96,10 @@ letter-spacing: 0.8px;
         margin-top: 64px;
         column-gap: 10px;
         flex-wrap: wrap;
+
+        @media screen and (min-width: 786px) {
+            margin-top: 0px;
+        }
     }
 
     &__link__container{

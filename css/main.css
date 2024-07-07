@@ -1648,6 +1648,14 @@ button {
   padding-left: 40px;
   padding-top: 48px;
 }
+@media screen and (min-width: 786px) {
+  .mobile-menu {
+    flex-direction: row;
+    align-items: center;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
 .mobile-menu__close {
   height: 30px;
   width: 30px;
@@ -1679,6 +1687,11 @@ button {
 }
 .mobile-menu__list {
   margin-bottom: 302px;
+}
+@media screen and (min-width: 786px) {
+  .mobile-menu__list {
+    margin-bottom: 0px;
+  }
 }
 .mobile-menu__page {
   color: #212121;
@@ -1712,6 +1725,11 @@ button {
   -moz-column-gap: 10px;
        column-gap: 10px;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 786px) {
+  .mobile-menu__list3 {
+    margin-top: 0px;
+  }
 }
 .mobile-menu__link__container {
   display: flex;
