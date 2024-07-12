@@ -1070,6 +1070,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 50px;
   animation-name: enter-from-up;
   animation-duration: 1s;
 }
